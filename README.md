@@ -2,14 +2,14 @@
 Dotfiles for my arch install
 
 ### Overview
-WM: sway
-Launcher: bemenu
-Bar: swaybar using i3blocks-rs
-Terminal: foot
-Notification daemon: mako
-Theme: tokyonight
-Shell: zsh
-Text editor: neovim
+* WM: sway
+* Launcher: bemenu
+* Bar: swaybar using i3blocks-rs
+* Text editor: neovim
+* Terminal: foot
+* Shell: zsh
+* Notification daemon: mako
+* Theme: tokyonight
 
 ### Installation
 To install, run the following command with root permissions to install packages from normal repositories. You will have to manually go through the package list to install AUR packages.
