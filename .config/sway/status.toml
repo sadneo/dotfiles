@@ -62,8 +62,8 @@ cmd = "amixer set Master 2%-"
 
 [[block]]
 block = "time"
-interval = 5
-format = " $icon $timestamp.datetime(f:'%a %d/%m %I:%M %p') "
+interval = 1
+format = " $icon $timestamp.datetime(f:'%a %m/%d %I:%M:%S %p') "
 
 [[block]]
 block = "menu"
