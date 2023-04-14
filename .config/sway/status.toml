@@ -71,6 +71,7 @@ text = " \uf011 "
 [[block.items]]
 display = " sleep "
 cmd = "systemctl suspend"
+confirm_msg = "sleep?"
 [[block.items]]
 display = " poweroff "
 cmd = "poweroff"
