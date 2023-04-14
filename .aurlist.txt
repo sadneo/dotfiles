@@ -1,0 +1,7 @@
+azote
+cbonsai-git
+lemurs-git
+nerd-fonts-meta
+nvim-packer-git
+paru
+zoom
