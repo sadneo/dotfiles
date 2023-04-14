@@ -52,6 +52,7 @@ zmodload zsh/complist
 autoload -Uz compinit
 compinit
 zstyle :compinstall filename '${HOME}/.zshrc'
+compdef dotfiles=git
 
 #- buggy
 zstyle ':completion:*:descriptions' format '%U%B%d%b%u'
