@@ -18,10 +18,11 @@ pacman -S --needed - < pkglist.txt
 ```
 
 ### Repository Setup
-In order to setup this repository, create a bare git repository in your home directory and then setup an alias to work on this repository. You can add this alias to your shell's runtime client too if you want.
+In order to setup this repository, create a bare git repository in your home directory and then setup an alias to work on this repository. You can add this alias to your shell's runtime client too if you want. You should also probably set up completion for dotfiles for that alias using compdef:
 ```sh
 git init --bare "$HOME/.dotfiles"
 alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+compdef dotfiles=git
 
 dotfiles remote add origin https://github.com/alfunx/.dotfiles
 dotfiles push --set-upstream origin master
