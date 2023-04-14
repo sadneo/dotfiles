@@ -20,6 +20,7 @@ export GOPATH="$HOME/go"
 #------------------------------
 alias ls="ls --color -F"
 alias ll="ls --color -lh"
+alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 #------------------------------
 # History stuff
