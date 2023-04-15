@@ -96,6 +96,9 @@ bindsym XF86MonBrightnessDown exec "light -U 1"
 # bindsym XF86Tools exec 
 # bindsym XF86Bluetooth exec "$term -e bluetoothctl"
 bindsym XF86Favorites exec "$term -e sudo pacman -Syu"
+# Headphone buttons
+bindsym XF86AudioPlay exec "playerctl play"
+bindsym XF86AudioPause exec "playerctl pause"
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
