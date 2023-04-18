@@ -32,7 +32,7 @@ SAVEHIST=1000
 #------------------------------
 # Keybindings
 #------------------------------
-bindkey -v
+bindkey -e
 typeset -g -A key
 bindkey '^?' backward-delete-char
 bindkey '^[[5~' up-line-or-history
