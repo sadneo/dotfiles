@@ -24,7 +24,7 @@ git init --bare "$HOME/.dotfiles"
 alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 compdef dotfiles=git
 
-dotfiles remote add origin https://github.com/alfunx/.dotfiles
+dotfiles remote add origin https://github.com/sadneo/dotfiles
 dotfiles push --set-upstream origin master
 ```
 
