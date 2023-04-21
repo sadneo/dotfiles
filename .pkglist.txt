@@ -1,3 +1,4 @@
+1password
 alsa-utils
 azote
 base
@@ -8,6 +9,7 @@ bluez
 bluez-utils
 cbonsai-git
 chromium
+cmatrix
 code
 discord
 dosfstools
@@ -22,6 +24,7 @@ gtk-engine-murrine
 i3status-rust
 imagemagick
 imv
+j4-dmenu-desktop
 lemurs-git
 lib32-libpulse
 lib32-pipewire
@@ -32,6 +35,7 @@ lxappearance
 mako
 man-db
 man-pages
+mesa-utils
 mpv
 mtools
 neofetch
@@ -42,6 +46,7 @@ noto-fonts
 noto-fonts-cjk
 ntfs-3g
 nvim-packer-git
+obsidian
 os-prober
 pacutils
 paru
@@ -60,9 +65,13 @@ ttf-arphic-ukai
 ttf-arphic-uming
 ttf-hanazono
 ttf-sazanami
+typioca-git
 unzip
+waydroid
 wl-clipboard
 xdg-desktop-portal-wlr
+xorg-xeyes
+xorg-xlsclients
 xorg-xwayland
 zoom
 zsh
