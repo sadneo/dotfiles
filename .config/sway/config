@@ -11,7 +11,7 @@ set $red "#db4b4b"
 
 # Applications
 set $term foot
-set $menu bemenu-run -i -b -p ">" -fn "Noto Sans Mono 10" \
+set $menu bemenu-run -ib -p ">" -fn "Noto Sans Mono 10" \
     --tb $bg --tf $fg \
     --fb $bg --ff $fg \
     --cb $bg --cf $fg \
@@ -21,6 +21,9 @@ set $menu bemenu-run -i -b -p ">" -fn "Noto Sans Mono 10" \
     --sb $bg --sf $fg \
     --ab $bg --af $fg \
     --scb $bg --scf $fg
+
+set $bemenu "bemenu -ib -p '>' -fn 'Noto Sans Mono 10' --tf '#7aa2f7' --hf '#7aa2f7'"
+set $menu j4-dmenu-desktop --dmenu=$bemenu --term=$term
 
 exec --no-startup-id mako
 

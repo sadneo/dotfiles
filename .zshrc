@@ -13,7 +13,7 @@ export GTK_THEME="tokyonight"
 export BROWSER="chromium"
 export EDITOR="nvim"
 export PATH="${PATH}:${HOME}/bin"
-export GOPATH="$HOME/go"
+export GOPATH="$HOME/.go"
 
 #------------------------------
 # Alias stuff

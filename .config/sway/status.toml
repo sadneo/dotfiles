@@ -39,11 +39,11 @@ format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
-[[block]]
-block = "battery"
+# [[block]]
+# block = "battery"
 
-[[block]]
-block = "backlight"
+# [[block]]
+# block = "backlight"
 
 [[block]]
 block = "sound"
