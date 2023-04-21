@@ -1,7 +1,13 @@
+1password
 azote
 cbonsai-git
 lemurs-git
+libgbinder
+libglibutil
 nerd-fonts-meta
 nvim-packer-git
 paru
+python-gbinder
+typioca-git
+waydroid
 zoom
