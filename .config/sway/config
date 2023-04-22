@@ -53,5 +53,5 @@ exec_always {
 }
 
 exec mako
-include keybinds.config
+include config.d/*
 
