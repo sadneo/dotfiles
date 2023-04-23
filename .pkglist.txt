@@ -26,11 +26,10 @@ imagemagick
 imv
 j4-dmenu-desktop
 lemurs-git
-lib32-libpulse
-lib32-pipewire
 linux-firmware
 linux-zen
 linux-zen-headers
+lutris
 lxappearance
 mako
 man-db
@@ -51,6 +50,7 @@ os-prober
 pacutils
 paru
 pavucontrol
+pinta
 piper
 pipewire-alsa
 pipewire-pulse
@@ -60,6 +60,8 @@ slurp
 sof-firmware
 sway
 swaybg
+swayidle
+swaylock
 tree
 ttf-arphic-ukai
 ttf-arphic-uming
@@ -67,9 +69,9 @@ ttf-hanazono
 ttf-sazanami
 typioca-git
 unzip
-waydroid
 wl-clipboard
 xdg-desktop-portal-wlr
+xorg-xev
 xorg-xeyes
 xorg-xlsclients
 xorg-xwayland
