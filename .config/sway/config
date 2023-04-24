@@ -10,9 +10,14 @@ set $blue7 "#394b70"
 set $red "#db4b4b"
 
 ### Output configuration
-swaybg_command ~/.azotebg
+exec ~/.azotebg
 output DP-3 resolution 1920x1080 position 1920,0
 output HDMI-A-5 resolution 1920x1080 position 0,0
+
+exec swayidle -w \\
+	timeout 300 "swaylock -f" \\
+    timeout 900 "systemctl suspend" \\
+	before-sleep "swaylock -f"
 
 ### Bar
 bar {
@@ -47,7 +52,7 @@ client.unfocused        $bg     $bg_dark    $fg   $bg   $bg
 client.urgent           $bg     $red        $fg   $red  $red
 
 set $gnome-schema org.gnome.desktop.interface
-exec_always {
+exec {
     gsettings set $gnome-schema gtk-theme 'tokyonight'
     gsettings set $gnome-schema font-name 'Noto Sans Mono'
 }
