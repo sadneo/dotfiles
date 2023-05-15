@@ -23,7 +23,6 @@ icons = "awesome6"
 block = "cpu"
 format = " $icon $utilization "
 interval = 1
-merge_with_next = true
 
 [[block]]
 block = "amd_gpu"
@@ -31,13 +30,11 @@ device = "card1"
 format = " $icon $utilization "
 format_alt = " $icon MEM: $vram_used_percents "
 interval = 1
-merge_with_next = true
 
 [[block]]
 block = "memory"
 format = " $icon $mem_total_used_percents.eng(w:2) "
 format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
-merge_with_next = true
 
 [[block]]
 block = "disk_space"
