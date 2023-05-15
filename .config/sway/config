@@ -23,7 +23,7 @@ exec swayidle -w \\
 bar {
     status_command i3status-rs ~/.config/sway/status.toml
     position top
-    font pango: Intel One Mono, FontAwesome 10
+    font pango: IntelOneMono, FontAwesome6Free 10
     separator_symbol "|"
 
     colors {
