@@ -12,9 +12,7 @@ return require("packer").startup(function(use)
     use "nvim-lua/plenary.nvim"
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
     use "tpope/vim-commentary"
-    use { "psliwka/vim-smoothie", config = function()
-        vim.g.smoothie_experimental_mappings = true
-    end}
+    use "psliwka/vim-smoothie" 
 
     if packer_bootstrap then
         require("packer").sync()
