@@ -1,27 +1,34 @@
+
 local options = ({
 	tabstop = 4,
 	softtabstop = 4,
 	shiftwidth = 4,
-	expandtab = true,
+	expandtab = false,
 
 	number = true,
+    relativenumber = true,
 	foldenable = false,
 	foldmethod = "syntax",
-	foldnestmax = 10,
-	foldlevel = 10,
-});
+})
 
 for option, value in pairs(options) do
 	vim.opt[option] = value
 end
 
--- nvim terminal escape keybind
-vim.cmd [[tnoremap <Esc> <C-\><C-n>]]
+vim.keymap.set("n", "<Space>", "<Nop>")
+vim.g.mapleader = " "
 
--- help vertical split
-vim.cmd[[autocmd! BufEnter * if &ft ==# 'help' | wincmd L | endif]]
+vim.keymap.set("n", "<Leader>e", ":Telescope find_files<CR>")
 
--- save views
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.api.nvim_create_autocmd({"BufEnter"}, {
+    callback = function()
+        if vim.bo.filetype == "help" then
+            vim.cmd("wincmd L")
+        end
+    end,
+})
+
 -- vim.cmd [[au BufWritePost,BufLeave,WinLeave ?* mkview
 -- au BufReadPre ?* silent! loadview]]
 
