@@ -8,11 +8,15 @@ return require("packer").startup(function(use)
     use "catppuccin/nvim"
 
     use "goolord/alpha-nvim"
-    use "nvim-telescope/telescope.nvim"
-    use "nvim-lua/plenary.nvim"
+    use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" }}
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
+
+	use "neovim/nvim-lspconfig"
+	use "williamboman/mason.nvim"
+	use "williamboman/mason-lspconfig.nvim"
+
     use "tpope/vim-commentary"
-    use "psliwka/vim-smoothie" 
+    -- use "psliwka/vim-smoothie" 
 
     if packer_bootstrap then
         require("packer").sync()
