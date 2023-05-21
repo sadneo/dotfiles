@@ -23,7 +23,7 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
     dashboard.button("e", "  New file", "<CMD>ene<BAR>startinsert<CR>"),
-    dashboard.button("c", "  Configuration", "<CMD>e ~/.config/nvim/<CR>"),
+    dashboard.button("c", "  Configuration", "<CMD>e ~/.config/nvim/lua/config<CR>"),
     dashboard.button("q", "  Quit", ":qa<CR>"),
 }
 
