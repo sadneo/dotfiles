@@ -2,6 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
+	use "dstein64/vim-startuptime"
 
     use "folke/tokyonight.nvim"
     use "morhetz/gruvbox"
