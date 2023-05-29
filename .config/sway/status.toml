@@ -1,9 +1,8 @@
 icons_format = "{icon}"
 
 [theme]
-theme = "native"
+theme = "semi-native"
 [theme.overrides]
-# idle_fg = ""
 good_fg = "#9ece6a"
 warning_fg = "#e0af68"
 critical_fg = "#f7768e"
@@ -12,28 +11,38 @@ info_fg = "#7aa2f7"
 [icons]
 icons = "awesome6"
 
-[[block]]
-block = "pacman"
-signal = 1
-aur_command = "paru -Qua"
+# [[block]]
+# block = "pacman"
+# signal = 1
+# aur_command = "paru -Qua"
+# [[block.click]]
+# button = "left"
+# update = true
 
 [[block]]
 block = "cpu"
+format = " $icon $utilization "
+interval = 1
 
 [[block]]
-block = "disk_space"
-path = "/"
-info_type = "available"
-alert_unit = "GB"
-interval = 20
-warning = 20.0
-alert = 10.0
-format = " $icon root: $available.eng(w:2) "
+block = "amd_gpu"
+device = "card1"
+format = " $icon $utilization "
+format_alt = " $icon MEM: $vram_used_percents "
+interval = 1
 
 [[block]]
 block = "memory"
 format = " $icon $mem_total_used_percents.eng(w:2) "
 format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
+
+[[block]]
+block = "disk_space"
+path = "/"
+format = " $path $available "
+format_alt = " $path $percentage "
+info_type = "available"
+alert_unit = "GB"
 
 [[block]]
 block = "bluetooth"
@@ -47,23 +56,18 @@ mac = "30:53:C1:32:5F:3B"
 
 [[block]]
 block = "sound"
+step_width = 5
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
 [[block.click]]
 button = "right"
 cmd = "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-[[block.click]]
-button = "up"
-cmd = "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-[[block.click]]
-button = "down"
-cmd = "pactl set-sink-volume @DEFAULT_SINK@ -5%"
 
 [[block]]
 block = "time"
+format = " $icon $timestamp.datetime(f:'%a %m/%d %H:%M:%S') "
 interval = 1
-format = " $icon $timestamp.datetime(f:'%a %m/%d %I:%M:%S %p') "
 
 [[block]]
 block = "menu"
@@ -71,12 +75,12 @@ text = " \uf011 "
 [[block.items]]
 display = " sleep "
 cmd = "systemctl suspend"
-confirm_msg = "sleep?"
+confirm_msg = " sleep?"
 [[block.items]]
 display = " poweroff "
 cmd = "poweroff"
-confirm_msg = "poweroff?"
+confirm_msg = " poweroff?"
 [[block.items]]
 display = " reboot "
 cmd = "reboot"
-confirm_msg = "reboot?"
+confirm_msg = " reboot?"

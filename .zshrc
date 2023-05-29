@@ -10,6 +10,8 @@
 # Variables
 #------------------------------
 export GTK_THEME="tokyonight"
+export QT_QPA_PLATFORM="wayland"
+export ANKI_WAYLAND=1
 export BROWSER="chromium"
 export EDITOR="nvim"
 export PATH="${PATH}:${HOME}/bin"
@@ -21,6 +23,7 @@ export GOPATH="$HOME/.go"
 alias ls="ls --color -F"
 alias ll="ls --color -lh"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias vi="nvim"
 
 #------------------------------
 # History stuff
