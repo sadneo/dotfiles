@@ -10,6 +10,8 @@
 # Variables
 #------------------------------
 export GTK_THEME="tokyonight"
+export QT_QPA_PLATFORM="wayland"
+export ANKI_WAYLAND=1
 export BROWSER="chromium"
 export EDITOR="nvim"
 export PATH="${PATH}:${HOME}/bin"
