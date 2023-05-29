@@ -8,6 +8,7 @@ return require("packer").startup(function(use)
     use "catppuccin/nvim"
 
     use "goolord/alpha-nvim"
+	use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true }}
     use { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" }}
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }
 
