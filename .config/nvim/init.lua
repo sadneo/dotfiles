@@ -1,5 +1,5 @@
 require("config.plugins")
 require("config.options")
-require("plugins.dashboard")
+require("plugins.ui")
+require("plugins.lsp")
 require("plugins.treesitter")
-require("plugins.lualine")
