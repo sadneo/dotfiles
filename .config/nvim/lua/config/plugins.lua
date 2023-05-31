@@ -6,7 +6,7 @@ return require("packer").startup(function(use)
 
     use "folke/tokyonight.nvim"
     use "morhetz/gruvbox"
-    use "catppuccin/nvim"
+	use "rebelot/kanagawa.nvim"
 
     use "goolord/alpha-nvim"
 	use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons", opt = true }}
