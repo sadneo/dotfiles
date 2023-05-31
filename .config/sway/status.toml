@@ -56,7 +56,7 @@ mac = "30:53:C1:32:5F:3B"
 
 [[block]]
 block = "sound"
-step_width = 5
+step_width = 2
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
