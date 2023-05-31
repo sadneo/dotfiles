@@ -1,10 +1,10 @@
-
 local options = ({
 	tabstop = 4,
 	softtabstop = 4,
 	shiftwidth = 4,
 	expandtab = false,
 
+	autoindent = true,
 	number = true,
     relativenumber = true,
 	foldenable = false,
@@ -29,6 +29,12 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
     end,
 })
 
--- vim.cmd [[au BufWritePost,BufLeave,WinLeave ?* mkview
--- au BufReadPre ?* silent! loadview]]
+vim.api.nvim_create_autocmd({"BufWinLeave"}, {
+	pattern = "*.*",
+	command = "mkview!",
+})
+vim.api.nvim_create_autocmd({"BufWinEnter"}, {
+	pattern = "*.*",
+	command = "silent loadview",
+})
 
