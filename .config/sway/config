@@ -15,7 +15,7 @@ output DP-3 resolution 1920x1080 position 1920,0
 output HDMI-A-5 resolution 1920x1080 position 0,0
 
 exec sway-audio-idle-inhibit
-exec swayidle -w timeout 300 "swaymsg 'output * dpms off'" resume "swaymsg 'output * dpms on'" timeout 600 "systemctl suspend"
+exec swayidle -w timeout 300 "swaymsg 'output * dpms off'" resume "swaymsg 'output * dpms on'" timeout 600 "systemctl suspend" resume "swaymsg 'output * dpms on'"
 
 ### Bar
 bar {
