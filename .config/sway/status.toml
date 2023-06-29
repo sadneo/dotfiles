@@ -11,24 +11,17 @@ info_fg = "#7aa2f7"
 [icons]
 icons = "awesome6"
 
-# [[block]]
-# block = "pacman"
-# signal = 1
-# aur_command = "paru -Qua"
-# [[block.click]]
-# button = "left"
-# update = true
+[[block]]
+block = "pacman"
+signal = 1
+aur_command = "paru -Qua"
+[[block.click]]
+button = "left"
+update = true
 
 [[block]]
 block = "cpu"
 format = " $icon $utilization "
-interval = 1
-
-[[block]]
-block = "amd_gpu"
-device = "card1"
-format = " $icon $utilization "
-format_alt = " $icon MEM: $vram_used_percents "
 interval = 1
 
 [[block]]
@@ -48,11 +41,11 @@ alert_unit = "GB"
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
-# [[block]]
-# block = "battery"
+[[block]]
+block = "battery"
 
-# [[block]]
-# block = "backlight"
+[[block]]
+block = "backlight"
 
 [[block]]
 block = "sound"
