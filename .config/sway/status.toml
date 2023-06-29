@@ -43,6 +43,8 @@ mac = "30:53:C1:32:5F:3B"
 
 [[block]]
 block = "battery"
+full_format = " $icon $percentage"
+not_charging_format = " $icon $percentage"
 
 [[block]]
 block = "backlight"
