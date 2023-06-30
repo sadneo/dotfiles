@@ -16,12 +16,12 @@ output HDMI-A-5 resolution 1920x1080 position 0,0
 
 exec swayidle -w \\
 	timeout 300 "swaylock -f" \\
-    timeout 900 "systemctl suspend" \\
+	timeout 900 "systemctl suspend" \\
 	before-sleep "swaylock -f"
 
 ### Bar
 bar {
-    status_command i3status-rs ~/.config/sway/status.toml
+	status_command i3status-rs ~/.config/sway/status.toml
     position top
     font pango: SourceCodePro, FontAwesome6Free 10
     separator_symbol "|"
