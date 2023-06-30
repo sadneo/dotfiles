@@ -14,6 +14,12 @@ icons = "awesome6"
 [[block]]
 block = "pacman"
 signal = 1
+interval = 600
+error_interval = 300
+format = " $icon $both "
+format_singular = " $icon $both "
+format_up_to_date = " $icon $both "
+warning_updates_regex = "(linux|linux-lts|linux-zen)"
 aur_command = "paru -Qua"
 [[block.click]]
 button = "left"
