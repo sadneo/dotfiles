@@ -65,11 +65,7 @@ step_width = 1
 
 [[block]]
 block = "sound"
-<<<<<<< HEAD
-step_width = 2
-=======
 step_width = 1
->>>>>>> laptop
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
