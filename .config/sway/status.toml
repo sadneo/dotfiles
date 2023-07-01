@@ -93,3 +93,7 @@ confirm_msg = " poweroff?"
 display = " reboot "
 cmd = "reboot"
 confirm_msg = " reboot?"
+[[block.items]]
+display = " hibernate "
+cmd = "systemctl hibernate"
+confirm_msg = " hibernate?"
