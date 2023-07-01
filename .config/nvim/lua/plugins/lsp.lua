@@ -37,6 +37,7 @@ cmp.setup.cmdline(":", {
 })
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
+print(capabilities)
 require("lspconfig").rust_analyzer.setup({
 	capabilities = capabilities,
     on_attach = function(client)
@@ -45,7 +46,7 @@ require("lspconfig").rust_analyzer.setup({
     settings = {
         ["rust-analyzer"] = {
 			diagnostics = {
-				enable = false,
+				enable = true,
 			},
             imports = {
                 granularity = {
