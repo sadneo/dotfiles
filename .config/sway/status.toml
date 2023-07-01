@@ -56,10 +56,11 @@ empty_format = " $icon $percentage"
 
 [[block]]
 block = "backlight"
+step_width = 1
 
 [[block]]
 block = "sound"
-step_width = 5
+step_width = 1
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
