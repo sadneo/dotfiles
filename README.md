@@ -12,9 +12,12 @@ Dotfiles for my arch install
 * Theme: tokyonight
 
 ### Installation
-To install, run the following command with root permissions to install packages from normal repositories. You will have to manually go through the package list to install AUR packages.
 ```sh
-pacman -S --needed - < pkglist.txt
+pacman -S --needed - <.pkglist.txt
+paru -S --needed - <.aurlist.txt
+git clone https://github.com/sadneo/dotfiles
+mv dotfiles/.git ~/.dotfiles
+mv dotfiles/* ~
 ```
 
 ### Repository Setup
@@ -29,13 +32,9 @@ dotfiles push --set-upstream origin master
 ```
 
 ### Backup
-To create a list of packages installed use the command
+To create a list of native and external packages installed:
 ```sh
-pacman -Qqe > .pkglist.txt
-```
-
-To create a list of external packages installed use the command
-```sh
+pacman -Qqen > .pkglist.txt
 pacman -Qqm > .aurlist.txt
 ```
 
