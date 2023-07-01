@@ -19,7 +19,7 @@ exec swayidle -w timeout 300 "swaymsg 'output * dpms off'" resume "swaymsg 'outp
 
 ### Bar
 bar {
-    status_command i3status-rs ~/.config/sway/status.toml
+	status_command i3status-rs ~/.config/sway/status.toml
     position top
     font pango: SourceCodePro, FontAwesome6Free 10
     separator_symbol "|"

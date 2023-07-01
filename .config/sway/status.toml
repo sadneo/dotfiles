@@ -11,24 +11,23 @@ info_fg = "#7aa2f7"
 [icons]
 icons = "awesome6"
 
-# [[block]]
-# block = "pacman"
-# signal = 1
-# aur_command = "paru -Qua"
-# [[block.click]]
-# button = "left"
-# update = true
+[[block]]
+block = "pacman"
+signal = 1
+interval = 600
+error_interval = 300
+format = " $icon $both "
+format_singular = " $icon $both "
+format_up_to_date = " $icon $both "
+warning_updates_regex = "(linux|linux-lts|linux-zen)"
+aur_command = "paru -Qua"
+[[block.click]]
+button = "left"
+update = true
 
 [[block]]
 block = "cpu"
 format = " $icon $utilization "
-interval = 1
-
-[[block]]
-block = "amd_gpu"
-device = "card1"
-format = " $icon $utilization "
-format_alt = " $icon MEM: $vram_used_percents "
 interval = 1
 
 [[block]]
@@ -53,15 +52,24 @@ blocking_cmd = true
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
-# [[block]]
-# block = "battery"
+[[block]]
+block = "battery"
+full_format = " $icon $percentage"
+charging_format = " $icon $percentage $time"
+not_charging_format = " $icon $percentage"
+empty_format = " $icon $percentage"
 
-# [[block]]
-# block = "backlight"
+[[block]]
+block = "backlight"
+step_width = 1
 
 [[block]]
 block = "sound"
+<<<<<<< HEAD
 step_width = 2
+=======
+step_width = 1
+>>>>>>> laptop
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"

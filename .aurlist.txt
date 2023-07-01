@@ -1,9 +1,9 @@
 1password
 azote
-cbonsai-git
 lemurs-git
-nerd-fonts-meta
 nvim-packer-git
 paru
+rate-mirrors-bin
+ttf-intel-one-mono
 typioca-git
 zoom

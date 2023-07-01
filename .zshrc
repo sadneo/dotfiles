@@ -14,7 +14,7 @@ export QT_QPA_PLATFORM="wayland"
 export ANKI_WAYLAND=1
 export BROWSER="chromium"
 export EDITOR="nvim"
-export PATH="${PATH}:${HOME}/bin"
+export PATH="${PATH}:${HOME}/.local/bin"
 export GOPATH="$HOME/.go"
 
 #------------------------------
