@@ -13,9 +13,8 @@ icons = "awesome6"
 
 [[block]]
 block = "pacman"
-signal = 1
+signal = 5
 interval = 600
-error_interval = 300
 format = " $icon $both "
 format_singular = " $icon $both "
 format_up_to_date = " $icon $both "
@@ -86,6 +85,10 @@ display = " sleep "
 cmd = "systemctl suspend"
 confirm_msg = " sleep?"
 [[block.items]]
+display = " hibernate "
+cmd = "systemctl hibernate"
+confirm_msg = " hibernate?"
+[[block.items]]
 display = " poweroff "
 cmd = "poweroff"
 confirm_msg = " poweroff?"
@@ -93,7 +96,3 @@ confirm_msg = " poweroff?"
 display = " reboot "
 cmd = "reboot"
 confirm_msg = " reboot?"
-[[block.items]]
-display = " hibernate "
-cmd = "systemctl hibernate"
-confirm_msg = " hibernate?"
