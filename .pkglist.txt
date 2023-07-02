@@ -65,6 +65,7 @@ ttf-arphic-ukai
 ttf-arphic-uming
 ttf-font-awesome
 ttf-hanazono
+ttf-nerd-fonts-symbols-mono
 ttf-sazanami
 unzip
 wl-clipboard

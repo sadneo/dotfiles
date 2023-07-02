@@ -1,14 +1,11 @@
 1password
 azote
-dmenu-wayland-git
-electron19
 lemurs-git
 nvim-packer-git
 paru
 rate-mirrors-bin
-spicetify-cli-git
+spicetify-cli
 spotify
 ttf-intel-one-mono
-typioca-git
-wmenu-git
+typioca
 zoom
