@@ -15,7 +15,8 @@ output DP-3 resolution 1920x1080 position 1920,0
 output HDMI-A-5 resolution 1920x1080 position 0,0
 
 exec sway-audio-idle-inhibit
-exec swayidle -w timeout 300 "swaymsg 'output * dpms off'" resume "swaymsg 'output * dpms on'" timeout 600 "systemctl suspend"
+exec swayidle -w timeout 300 "swaymsg 'output * power off'" resume "swaymsg 'output * dpms power'" timeout 600 "systemctl suspend" after-resume "swaymsg 'output * power on'"
+bindswitch --locked lid:off "systemctl suspend"
 
 ### Bar
 bar {
@@ -88,9 +89,6 @@ bindsym XF86MonBrightnessUp exec "light -A 2"
 bindsym XF86MonBrightnessDown exec "light -U 2"
 bindsym XF86AudioPlay exec "playerctl play"
 bindsym XF86AudioPause exec "playerctl pause"
-bindsym $mod output eDP-1 enable
-bindswitch lid:on output eDP-1 enable
-bindswitch lid:off output eDP-1 disable
 
 bindsym $mod+d exec $menu
 bindsym $mod+Return exec $term
