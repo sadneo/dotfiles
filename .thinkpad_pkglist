@@ -24,6 +24,7 @@ i3status-rust
 imagemagick
 imv
 intel-ucode
+libsixel
 light
 linux-firmware
 linux-zen
