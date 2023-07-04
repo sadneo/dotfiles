@@ -1,4 +1,5 @@
-# Borrowed from this guy, his original config can be found on the arch wiki ;-)
+# Used as base config:
+# https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc
 
 #------------------------------------------------------------------#
 # File:     .zshrc   ZSH resource file                             #
@@ -9,12 +10,13 @@
 #------------------------------
 # Variables
 #------------------------------
+export PATH="${PATH}:${HOME}/.local/bin"
+export TERM="foot"
+export EDITOR="nvim"
+export BROWSER="chromium"
 export GTK_THEME="tokyonight"
 export QT_QPA_PLATFORM="wayland"
 export ANKI_WAYLAND=1
-export BROWSER="chromium"
-export EDITOR="nvim"
-export PATH="${PATH}:${HOME}/.local/bin"
 export GOPATH="$HOME/.go"
 
 #------------------------------
@@ -24,6 +26,7 @@ alias ls="ls --color -F"
 alias ll="ls --color -lh"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vi="nvim"
+alias vim="nvim"
 
 #------------------------------
 # History stuff
