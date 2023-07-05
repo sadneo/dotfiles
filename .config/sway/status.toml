@@ -43,11 +43,6 @@ info_type = "available"
 alert_unit = "GB"
 
 [[block]]
-block = "pomodoro"
-notify_cmd = "swaynag -m '{msg}'"
-blocking_cmd = true
-
-[[block]]
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
