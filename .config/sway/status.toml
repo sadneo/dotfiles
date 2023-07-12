@@ -80,10 +80,6 @@ display = " sleep "
 cmd = "systemctl suspend"
 confirm_msg = " sleep?"
 [[block.items]]
-display = " hibernate "
-cmd = "systemctl hibernate"
-confirm_msg = " hibernate?"
-[[block.items]]
 display = " poweroff "
 cmd = "poweroff"
 confirm_msg = " poweroff?"
