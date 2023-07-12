@@ -28,6 +28,7 @@ bar {
     position top
     font pango: SourceCodePro, FontAwesome6Free 10
     separator_symbol "|"
+	tray_output none
 
     colors {
         background $bg_dark
