@@ -197,3 +197,5 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
+include ~/.config/sway/config.d/*
+
