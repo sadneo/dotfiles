@@ -43,6 +43,17 @@ info_type = "available"
 alert_unit = "GB"
 
 [[block]]
+block = "battery"
+full_format = " $icon $percentage"
+charging_format = " $icon $percentage $time"
+not_charging_format = " $icon $percentage"
+empty_format = " $icon $percentage"
+
+[[block]]
+block = "backlight"
+step_width = 1
+
+[[block]]
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
