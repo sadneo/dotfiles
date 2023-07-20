@@ -13,9 +13,8 @@ icons = "awesome6"
 
 [[block]]
 block = "pacman"
-signal = 1
+signal = 5
 interval = 600
-error_interval = 300
 format = " $icon $both "
 format_singular = " $icon $both "
 format_up_to_date = " $icon $both "
@@ -44,24 +43,8 @@ info_type = "available"
 alert_unit = "GB"
 
 [[block]]
-block = "pomodoro"
-notify_cmd = "swaynag -m '{msg}'"
-blocking_cmd = true
-
-[[block]]
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
-
-[[block]]
-block = "battery"
-full_format = " $icon $percentage"
-charging_format = " $icon $percentage $time"
-not_charging_format = " $icon $percentage"
-empty_format = " $icon $percentage"
-
-[[block]]
-block = "backlight"
-step_width = 1
 
 [[block]]
 block = "sound"
@@ -86,6 +69,10 @@ display = " sleep "
 cmd = "systemctl suspend"
 confirm_msg = " sleep?"
 [[block.items]]
+display = " hibernate "
+cmd = "systemctl hibernate"
+confirm_msg = " hibernate?"
+[[block.items]]
 display = " poweroff "
 cmd = "poweroff"
 confirm_msg = " poweroff?"
@@ -93,7 +80,3 @@ confirm_msg = " poweroff?"
 display = " reboot "
 cmd = "reboot"
 confirm_msg = " reboot?"
-[[block.items]]
-display = " hibernate "
-cmd = "systemctl hibernate"
-confirm_msg = " hibernate?"

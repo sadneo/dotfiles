@@ -5,6 +5,6 @@ border-color=#3b4261
 border-size=1
 
 history=0
-default-timeout=2500
+default-timeout=5000
 ignore-timeout=1
 anchor=bottom-right
