@@ -23,8 +23,8 @@ export GOPATH="$HOME/.go"
 #------------------------------
 # Alias stuff
 #------------------------------
-alias ls="ls --color -F"
-alias ll="ls --color -lh"
+alias ls="exa"
+alias ll="exa -lh"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vi="nvim"
 alias vim="nvim"
