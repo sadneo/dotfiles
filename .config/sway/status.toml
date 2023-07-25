@@ -43,6 +43,17 @@ info_type = "available"
 alert_unit = "GB"
 
 [[block]]
+block = "music"
+format = " $icon { $prev $play $next $volume }"
+player = "spotify"
+[[block.click]]
+button = "up"
+cmd = "playerctl volume 0.01+"
+[[block.click]]
+button = "down"
+cmd = "playerctl volume 0.01-"
+
+[[block]]
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
