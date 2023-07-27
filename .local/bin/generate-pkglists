@@ -1,0 +1,9 @@
+#!/bin/zsh
+if [ "$HOST" = "thinkpad" ]; then
+	pacman -Qqen > $HOME/.thinkpad_pkglist
+	pacman -Qqm > $HOME/.thinkpad_aurlist
+elif [ "$HOST" = "desktop" ]; then
+	pacman -Qqen > $HOME/.desktop_pkglist
+	pacman -Qqm > $HOME/.desktop_aurlist
+fi
+
