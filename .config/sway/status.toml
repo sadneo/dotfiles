@@ -3,10 +3,11 @@ icons_format = "{icon}"
 [theme]
 theme = "semi-native"
 [theme.overrides]
-good_fg = "#9ece6a"
-warning_fg = "#e0af68"
-critical_fg = "#f7768e"
-info_fg = "#7aa2f7"
+idle_fg = "#e6e1cf"
+info_fg = "#59c2ff"
+good_fg = "#b8cc52"
+warning_fg = "#ffb454"
+critical_fg = "#f07178"
 
 [icons]
 icons = "awesome6"
