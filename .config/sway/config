@@ -1,13 +1,24 @@
 # Colors
-set $bg #0A0E14
-set $fg #B3B1AD
-set $border #4D5566
-set $focus #95E5CB
-set $active #59C2FF
-set $error #E6B450
+set $base00 #0f1419
+set $base01 #131721
+set $base02 #272d38
+set $base03 #3e4b59
+set $base04 #bfbdb6
+set $base05 #e6e1cf
+set $base06 #e6e1cf
+set $base07 #f3f4f5
+set $base08 #f07178
+set $base09 #ff8f40
+set $base0A #ffb454
+set $base0B #b8cc52
+set $base0C #95e6cb
+set $base0D #59c2ff
+set $base0E #d2a6ff
+set $base0F #e6b673
+
 
 ### Output configuration
-exec ~/.azotebg
+swaybg_command ~/.azotebg
 output DP-3 resolution 1920x1080 position 1920,0
 output HDMI-A-5 resolution 1920x1080 position 0,0
 
@@ -28,14 +39,15 @@ bar {
 	tray_output none
 
     colors {
-        background $bg
-        statusline $fg
-        separator $border
+        background $base00
+        separator $base01
+        statusline $base04
         # border, bg, text
-        focused_workspace	$bg	$bg $focus
-        active_workspace	$bg $bg $active
-        inactive_workspace	$bg $bg $fg
-        urgent_workspace	$bg $bg $error
+        focused_workspace	$base00	$base0D $base00
+        active_workspace	$base00 $base02 $base05
+        inactive_workspace	$base00 $base00 $base05
+        urgent_workspace	$base00 $base08 $base00
+		binding_mode        $base00 $base08 $base00
     }
 }
 
@@ -46,11 +58,13 @@ default_floating_border normal
 hide_edge_borders smart
 font pango: monospace 10
 
-# Colors                border  bg          text	indi  childborder
-client.focused          $border     $bg			$focus  $bg   $bg
-client.focused_inactive $border     $bg			$active $bg   $bg
-client.unfocused        $border     $bg			$fg		$bg   $bg
-client.urgent           $border     $error      $bg		$bg	  $bg
+# Colors                border  bg		text	indi	childborder
+client.focused          $base00 $base0D	$base00 $base0D $base0D
+client.focused_inactive $base00 $base02	$base05 $base03 $base01
+client.unfocused        $base00 $base00	$base05	$base01 $base01
+client.urgent           $base00 $base08 $base00	$base08 $base08
+client.placeholder      $base00 $base00 $base05 $base00 $base00
+client.background       $base07
 
 set $gnome-schema org.gnome.desktop.interface
 exec {
@@ -61,7 +75,7 @@ exec {
 exec mako
 
 # Applications
-set $term foot
+set $term kitty
 set $menu "bemenu-run -ib -p '>' -fn 'IntelOneMono 10' --tf '#7aa2f7' --hf '#7aa2f7'"
 
 ### Keybinds
