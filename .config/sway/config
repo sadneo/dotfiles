@@ -1,13 +1,10 @@
 # Colors
-set $bg "#1a1b26"
-set $bg_dark "#16161e"
-set $fg "#c0caf5"
-set $fg_dark "#a9b1d6"
-set $fg_gutter "#3b4261"
-set $blue0 "#3d59a1"
-set $blue "#7aa2f7"
-set $blue7 "#394b70"
-set $red "#db4b4b"
+set $bg #0A0E14
+set $fg #B3B1AD
+set $border #4D5566
+set $focus #95E5CB
+set $active #59C2FF
+set $error #E6B450
 
 ### Output configuration
 exec ~/.azotebg
@@ -31,14 +28,14 @@ bar {
 	tray_output none
 
     colors {
-        background $bg_dark
-        statusline $fg_dark
-        separator $fg_gutter
+        background $bg
+        statusline $fg
+        separator $border
         # border, bg, text
-        focused_workspace	$bg	$blue0  $fg
-        active_workspace	$bg $blue7  $fg
-        inactive_workspace	$bg $bg     $fg
-        urgent_workspace	$bg $red    $fg
+        focused_workspace	$bg	$bg $focus
+        active_workspace	$bg $bg $active
+        inactive_workspace	$bg $bg $fg
+        urgent_workspace	$bg $bg $error
     }
 }
 
@@ -47,13 +44,13 @@ bar {
 default_border pixel 1
 default_floating_border normal
 hide_edge_borders smart
-font pango: Noto Sans Mono 10
+font pango: monospace 10
 
-# Colors                border  bg          text  indi  childborder
-client.focused          $bg     $blue0      $fg   $fg   $blue0
-client.focused_inactive $bg     $blue7      $fg   $bg   $bg
-client.unfocused        $bg     $bg_dark    $fg   $bg   $bg
-client.urgent           $bg     $red        $fg   $red  $red
+# Colors                border  bg          text	indi  childborder
+client.focused          $border     $bg			$focus  $bg   $bg
+client.focused_inactive $border     $bg			$active $bg   $bg
+client.unfocused        $border     $bg			$fg		$bg   $bg
+client.urgent           $border     $error      $bg		$bg	  $bg
 
 set $gnome-schema org.gnome.desktop.interface
 exec {
@@ -64,7 +61,7 @@ exec {
 exec mako
 
 # Applications
-set $term kitty
+set $term foot
 set $menu "bemenu-run -ib -p '>' -fn 'IntelOneMono 10' --tf '#7aa2f7' --hf '#7aa2f7'"
 
 ### Keybinds
