@@ -19,6 +19,7 @@ export QT_QPA_PLATFORM="wayland"
 
 export ANKI_WAYLAND=1
 export GOPATH="$HOME/.go"
+export KITTY_ENABLE_WAYLAND=1
 
 #------------------------------
 # Alias stuff
@@ -51,6 +52,11 @@ bindkey '^[[B' down-line-or-search
 bindkey '^[[C' forward-char 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+
+# ctrl w cool
+backward-delete-word() WORDCHARS="" zle .$WIDGET
+zle -N backward-delete-word
+bindkey "^[[W" backward-delete-word
 
 #------------------------------
 # Comp stuff
