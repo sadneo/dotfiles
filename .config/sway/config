@@ -64,7 +64,7 @@ exec {
 exec mako
 
 # Applications
-set $term foot
+set $term kitty
 set $menu "bemenu-run -ib -p '>' -fn 'IntelOneMono 10' --tf '#7aa2f7' --hf '#7aa2f7'"
 
 ### Keybinds
