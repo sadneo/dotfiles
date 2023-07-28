@@ -1,23 +1,27 @@
 daemonize
 ignore-empty-password
-
-clock
-indicator
-color=24283b
 scaling=fill
-
 indicator-radius=150
 indicator-thickness=0
 
-inside-color=00000000
-inside-clear-color=00000000
-inside-caps-lock-color=00000000
-inside-ver-color=00000000
-inside-wrong-color=00000000
-line-uses-inside
+# COLOUR (base16)
+color=0F1419
+bs-hl-color=E6B673
+caps-lock-bs-hl-color=E6B673
+caps-lock-key-hl-color=B8CC52
+key-hl-color=B8CC52
+inside-clear-color=3E4B59
+inside-ver-color=3E4B59
+inside-wrong-color=F07178
+ring-wrong-color=F07178
+ring-color=FFB454
+ring-caps-lock-color=FFB454
+ring-clear-color=95E6CB
+text-clear-color=95E6CB
+ring-ver-color=59C2FF
+text-color=E6E1CF
+text-caps-lock-color=E6E1CF
+text-ver-color=E6E1CF
+text-wrong-color=E6E1CF
 
-text-color=c0caf5
-text-clear-color=0db9d7
-text-caps-lock-color=b2555b
-text-ver-color=ff9e64
-text-wrong-color=db4b4b
+
