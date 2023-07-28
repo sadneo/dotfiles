@@ -1,12 +1,13 @@
 icons_format = "{icon}"
 
 [theme]
-theme = "semi-native"
+theme = "native"
 [theme.overrides]
-good_fg = "#9ece6a"
-warning_fg = "#e0af68"
-critical_fg = "#f7768e"
-info_fg = "#7aa2f7"
+idle_fg = "#e6e1cf"
+info_fg = "#59c2ff"
+good_fg = "#b8cc52"
+warning_fg = "#ffb454"
+critical_fg = "#f07178"
 
 [icons]
 icons = "awesome6"
@@ -20,6 +21,7 @@ format_singular = " $icon $both "
 format_up_to_date = " $icon $both "
 warning_updates_regex = "(linux|linux-lts|linux-zen)"
 aur_command = "paru -Qua"
+error_format = "update query error"
 [[block.click]]
 button = "left"
 update = true
@@ -41,6 +43,27 @@ format = " $path $available "
 format_alt = " $path $percentage "
 info_type = "available"
 alert_unit = "GB"
+
+[[block]]
+block = "music"
+format = " $icon $volume "
+player = "spotify"
+error_format = ""
+[[block.click]]
+button = "left"
+cmd = "playerctl play-pause"
+[[block.click]]
+button = "forward"
+cmd = "playerctl next"
+[[block.click]]
+button = "backward"
+cmd = "playerctl previous"
+[[block.click]]
+button = "up"
+cmd = "playerctl volume 0.01+"
+[[block.click]]
+button = "down"
+cmd = "playerctl volume 0.01-"
 
 [[block]]
 block = "bluetooth"
@@ -68,10 +91,6 @@ text = " \uf011 "
 display = " sleep "
 cmd = "systemctl suspend"
 confirm_msg = " sleep?"
-[[block.items]]
-display = " hibernate "
-cmd = "systemctl hibernate"
-confirm_msg = " hibernate?"
 [[block.items]]
 display = " poweroff "
 cmd = "poweroff"

@@ -4,6 +4,7 @@ return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
 	use "dstein64/vim-startuptime"
 
+	use "Shatur/neovim-ayu"
     use "folke/tokyonight.nvim"
     use "morhetz/gruvbox"
 	use "rebelot/kanagawa.nvim"

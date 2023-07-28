@@ -1,4 +1,0 @@
-#!/bin/zsh
-pacman -Qqen > $HOME/.${HOST}_pkglist
-pacman -Qqm > $HOME/.${HOST}_aurlist
-

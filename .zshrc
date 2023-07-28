@@ -11,7 +11,6 @@
 # Variables
 #------------------------------
 export PATH="${PATH}:${HOME}/.local/bin"
-export TERM="foot"
 export EDITOR="nvim"
 export BROWSER="chromium"
 export GTK_THEME="tokyonight"
@@ -19,12 +18,13 @@ export QT_QPA_PLATFORM="wayland"
 
 export ANKI_WAYLAND=1
 export GOPATH="$HOME/.go"
+export KITTY_ENABLE_WAYLAND=1
 
 #------------------------------
 # Alias stuff
 #------------------------------
-alias ls="ls --color -F"
-alias ll="ls --color -lh"
+alias ls="exa"
+alias ll="exa -lh"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vi="nvim"
 alias vim="nvim"
@@ -51,6 +51,11 @@ bindkey '^[[B' down-line-or-search
 bindkey '^[[C' forward-char 
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
+
+# ctrl w cool
+backward-delete-word() WORDCHARS="" zle .$WIDGET
+zle -N backward-delete-word
+bindkey "^[[W" backward-delete-word
 
 #------------------------------
 # Comp stuff

@@ -8,8 +8,10 @@ Dotfiles for my arch install
 * Text editor: neovim
 * Terminal: foot
 * Shell: zsh
-* Notification daemon: mako
-* Theme: tokyonight
+* Notifications: mako
+* Theme: ayu-dark
+    * GTK: https://github.com/tinted-theming/base16-gtk-flatcolor
+    * Icons: Qogir
 
 ### Installation
 ```sh
