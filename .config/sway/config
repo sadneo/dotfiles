@@ -93,8 +93,8 @@ floating_modifier $mod normal
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy -t image/png
 bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 bindsym $mod+Shift+x exec "swaylock"
-bindsym --whole-window BTN_EXTRA exec "playerctl -i spotify next"
-bindsym --whole-window BTN_SIDE exec "playerctl -i spotify play-pause"
+bindsym --whole-window BTN_EXTRA exec "playerctl next"
+bindsym --whole-window BTN_SIDE exec "playerctl play-pause"
 # Media keys
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
