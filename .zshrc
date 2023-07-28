@@ -11,7 +11,6 @@
 # Variables
 #------------------------------
 export PATH="${PATH}:${HOME}/.local/bin"
-export TERM="foot"
 export EDITOR="nvim"
 export BROWSER="chromium"
 export GTK_THEME="tokyonight"
