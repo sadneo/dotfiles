@@ -1,7 +1,7 @@
 icons_format = "{icon}"
 
 [theme]
-theme = "semi-native"
+theme = "native"
 [theme.overrides]
 idle_fg = "#e6e1cf"
 info_fg = "#59c2ff"

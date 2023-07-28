@@ -40,7 +40,7 @@ bar {
 
     colors {
         background $base00
-        separator $base01
+        separator $base03
         statusline $base04
         # border, bg, text
         focused_workspace	$base00	$base0D $base00
