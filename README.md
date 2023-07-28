@@ -11,6 +11,7 @@ Dotfiles for my arch install
 * Notifications: mako
 * Theme: ayu-dark
     * GTK: https://github.com/tinted-theming/base16-gtk-flatcolor
+    * Icons: Qogir
 
 ### Installation
 ```sh
