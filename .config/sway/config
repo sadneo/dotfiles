@@ -18,7 +18,7 @@ set $base0F #e6b673
 
 
 ### Output configuration
-swaybg_command ~/.azotebg
+exec_always ~/.azotebg
 output DP-3 resolution 1920x1080 position 1920,0
 output HDMI-A-5 resolution 1920x1080 position 0,0
 
