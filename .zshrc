@@ -23,6 +23,7 @@ export KITTY_ENABLE_WAYLAND=1
 #------------------------------
 # Alias stuff
 #------------------------------
+alias tree="exa -T --git-ignore"
 alias ls="exa"
 alias ll="exa -lh"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
