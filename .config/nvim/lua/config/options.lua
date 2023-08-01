@@ -15,7 +15,6 @@ for option, value in pairs(options) do
 	vim.opt[option] = value
 end
 
-vim.cmd.colorscheme("ayu-dark")
 vim.keymap.set("n", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 
