@@ -76,7 +76,7 @@ exec mako
 
 # Applications
 set $term kitty
-set $menu bemenu-run -i -l 20 -fn "IntelOneMono 10" --fb "#0F1419" --ff "#95E6CB" --nb "#0F1419" --nf "#E6E1CF" --af "#E6E1CF" --tb "#0F1419" --hb "#0F1419" --tf "#59C2FF" --hf "#D2A6FF" --ab "#0F1419"
+set $menu bemenu-run -i -l 20 -fn "IntelOneMono 10" --fb "$base00" --ff "$base0C" --nb "$base00" --nf "$base05" --tb "$base00" --hb "$base00" --tf "$base0D" --hf "$base0E" --af "$base05" --ab "$base00"
 
 ### Keybinds
 set $mod Mod4
