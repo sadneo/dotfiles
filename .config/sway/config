@@ -18,9 +18,8 @@ set $base0F #e6b673
 
 
 ### Output configuration
-swaybg_command ~/.azotebg
-output DP-3 resolution 1920x1080 position 1920,0
-output HDMI-A-5 resolution 1920x1080 position 0,0
+output DP-3 resolution 1920x1080 position 1920,0 bg ~/Pictures/wallpapers/bike1.png fill
+output HDMI-A-5 resolution 1920x1080 position 0,0 bg ~/Pictures/wallpapers/bike2.png fill
 
 exec sway-audio-idle-inhibit
 exec swayidle -w \
