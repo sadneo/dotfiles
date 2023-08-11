@@ -11,7 +11,6 @@
 # Variables
 #------------------------------
 export PATH="${PATH}:${HOME}/.local/bin"
-export TERM="foot"
 export EDITOR="nvim"
 export BROWSER="chromium"
 export GTK_THEME="tokyonight"
@@ -24,6 +23,7 @@ export KITTY_ENABLE_WAYLAND=1
 #------------------------------
 # Alias stuff
 #------------------------------
+alias tree="exa -T --git-ignore"
 alias ls="exa"
 alias ll="exa -lh"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
