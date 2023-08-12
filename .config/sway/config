@@ -18,9 +18,8 @@ set $base0F #e6b673
 
 
 ### Output configuration
-exec_always ~/.azotebg
-output DP-3 resolution 1920x1080 position 1920,0
-output HDMI-A-5 resolution 1920x1080 position 0,0
+output DP-3 resolution 1920x1080 position 1920,0 bg ~/Pictures/wallpapers/bike1.png fill
+output HDMI-A-5 resolution 1920x1080 position 0,0 bg ~/Pictures/wallpapers/bike2.png fill
 
 exec sway-audio-idle-inhibit
 exec swayidle -w \
@@ -76,7 +75,7 @@ exec mako
 
 # Applications
 set $term foot
-set $menu "bemenu-run -ib -p '>' -fn 'IntelOneMono 10' --tf '#59c2ff' --hf '#59c2ff'"
+set $menu bemenu-run -i -l 20 -fn "IntelOneMono 10" --fb "$base00" --ff "$base0C" --nb "$base00" --nf "$base05" --tb "$base00" --hb "$base00" --tf "$base0D" --hf "$base0E" --af "$base05" --ab "$base00"
 
 ### Keybinds
 set $mod Mod4
