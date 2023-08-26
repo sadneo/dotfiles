@@ -22,12 +22,12 @@ output DP-3 resolution 1920x1080 position 1920,0
 output HDMI-A-5 resolution 1920x1080 position 0,0
 
 exec sway-audio-idle-inhibit
-exec swayidle -w \
-	timeout 300 "notify-send sway 'idling soon'" \
-	timeout 420 "swaymsg 'output * power off'" \
-		resume "swaymsg 'output * power on'" \
-	timeout 600 "systemctl suspend" \
-	after-resume "swaymsg 'output * power on'"
+# exec swayidle -w \
+# 	timeout 300 "notify-send sway 'idling soon'" \
+# 	timeout 420 "swaymsg 'output * power off'" \
+# 		resume "swaymsg 'output * power on'" \
+# 	timeout 600 "systemctl suspend" \
+# 	after-resume "swaymsg 'output * power on'"
 bindswitch --locked lid:off "systemctl suspend"
 
 ### Bar
