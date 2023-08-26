@@ -1,39 +1,16 @@
-local options = ({
-	tabstop = 4,
-	softtabstop = 4,
-	shiftwidth = 4,
-	expandtab = false,
-
-	autoindent = true,
-	number = true,
-    relativenumber = true,
-	foldenable = false,
-	foldmethod = "syntax",
-})
-
-for option, value in pairs(options) do
-	vim.opt[option] = value
-end
-
-vim.keymap.set("n", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<Leader>e", ":Telescope find_files<CR>")
-vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
-vim.api.nvim_create_autocmd({"BufEnter"}, {
-    callback = function()
-        if vim.bo.filetype == "help" then
-            vim.cmd("wincmd L")
-        end
-    end,
-})
+local opt = vim.opt
+opt.confirm = true
 
-vim.api.nvim_create_autocmd({"BufWinLeave"}, {
-	pattern = "?*",
-	command = "mkview",
-})
-vim.api.nvim_create_autocmd({"BufWinEnter"}, {
-	pattern = "?*",
-	command = "silent! loadview",
-})
+opt.tabstop = 4
+opt.softtabstop = -1
+opt.shiftwidth = 4
+opt.expandtab = true
+
+opt.autoindent = true
+opt.number = true
+opt.relativenumber = true
+opt.foldenable = false
+opt.foldmethod = "syntax"
 
