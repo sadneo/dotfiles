@@ -30,6 +30,11 @@ exec sway-audio-idle-inhibit
 # 	after-resume "swaymsg 'output * power on'"
 bindswitch --locked lid:off "systemctl suspend"
 
+### Input configuration
+input "type:keyboard" {
+    xkb_options caps:escape_shifted_capslock
+}
+
 ### Bar
 bar {
 	status_command i3status-rs ~/.config/sway/status.toml
