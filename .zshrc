@@ -54,9 +54,9 @@ bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
 # C-w like bash
-backward-kill-word() WORDCHARS="" zle .$WIDGET
-zle -N backward-delete-word
-bindkey "^W" backward-delete-word
+zle -N backward-kill-bash-word
+backward-kill-bash-word() WORDCHARS="" zle .backward-kill-word
+bindkey "^W" backward-kill-bash-word
 
 #------------------------------
 # Comp stuff
