@@ -20,6 +20,7 @@ return {
                 dashboard.button("f", " " .. " Find file", ":Telescope find_files <CR>"),
                 dashboard.button("i", " " .. " New file", ":ene <BAR> startinsert <CR>"),
                 dashboard.button("r", " " .. " Recent files", ":Telescope oldfiles <CR>"),
+                dashboard.button("n", " " .. " Notes", ":Neorg workspace notes<CR>"),
                 dashboard.button("g", " " .. " Find text", ":Telescope live_grep <CR>"),
                 dashboard.button("c", " " .. " Config", ":e $MYVIMRC <CR>"),
                 dashboard.button("s", " " .. " Restore Session", [[:lua require("persistence").load() <cr>]]),
@@ -33,7 +34,6 @@ return {
     },
     {
         "nvim-lualine/lualine.nvim",
-        requires = { "nvim-tree/nvim-web-devicons", opt = true },
         config = function()
             require("lualine").setup({
                 options = {
@@ -61,7 +61,7 @@ return {
             })
         end,
     },
-    { "nvim-telescope/telescope.nvim", requires = { "nvim-lua/plenary.nvim" }},
+    { "nvim-telescope/telescope.nvim", dependencies = { "nvim-lua/plenary.nvim" }},
 }
 
 

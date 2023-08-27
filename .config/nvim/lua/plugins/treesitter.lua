@@ -2,10 +2,16 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
+        build = ":TSUpdate",
+        event = { "BufReadPost", "BufNewFile" },
         config = function()
-            vim.wo.foldmethod = "expr"
-            vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
+            require("nvim-treesitter.configs").setup({
+                ensure_installed = { "lua", "rust", "toml", "java", "yaml" },
+                highlight = { enable = true },
+                indent = { enable = true },
+            })
+            vim.opt.foldmethod = "expr"
+            vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
         end,
     },
 }

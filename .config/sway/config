@@ -21,6 +21,11 @@ set $base0F #e6b673
 output DP-5 resolution 1920x1080 position 1920,0 bg ~/Pictures/wallpapers/bike1.png fill
 
 
+### Input configuration
+input "type:keyboard" {
+    xkb_options caps:escape_shifted_capslock
+}
+
 ### Bar
 bar {
 	status_command i3status-rs ~/.config/sway/status.toml
