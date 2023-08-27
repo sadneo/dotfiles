@@ -53,10 +53,10 @@ bindkey '^[[C' forward-char
 bindkey "^[[H" beginning-of-line
 bindkey "^[[F" end-of-line
 
-# ctrl w cool
-backward-delete-word() WORDCHARS="" zle .$WIDGET
+# C-w like bash
+backward-kill-word() WORDCHARS="" zle .$WIDGET
 zle -N backward-delete-word
-bindkey "^[[W" backward-delete-word
+bindkey "^W" backward-delete-word
 
 #------------------------------
 # Comp stuff
