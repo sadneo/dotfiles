@@ -19,15 +19,15 @@ return {
                     },
                     ["core.export"] = {},
                     ["core.dirman"] = { -- Manages Neorg workspaces
-                    config = {
-                        workspaces = {
-                            notes = "~/Documents/notes",
+                        config = {
+                            workspaces = {
+                                notes = "~/Documents/notes",
+                            },
+                            default_workspace = "notes",
                         },
-                        default_workspace = "notes",
                     },
                 },
-            },
-        }
-    end,
-},
+            }
+        end,
+    },
 } 
