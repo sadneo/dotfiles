@@ -1,3 +1,5 @@
+vim.o.background = "dark" -- ayu uses this
+
 return {
 	{
 		"Shatur/neovim-ayu",
