@@ -13,7 +13,7 @@ return {
                     ["core.keybinds"] = {
                         config = {
                             hook = function(keybinds)
-                                keybinds.map("norg", "n", "p", "core.looking-glass.magnify-code-block")
+                                keybinds.remap_event("norg", "n", "<C-CR>", "core.looking-glass.magnify-code-block")
                             end,
                         },
                     },
