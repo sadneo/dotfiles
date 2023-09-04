@@ -6,3 +6,5 @@ end, {expr=true, noremap=true})
 vim.keymap.set("n", "<Space>", "<NOP>")
 vim.keymap.set("n", "<Leader>e", ":Telescope find_files<CR>")
 
+vim.keymap.set("n", "<M-h>", "gT")
+vim.keymap.set("n", "<M-l>", "gt")
