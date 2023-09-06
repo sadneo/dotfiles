@@ -18,8 +18,7 @@ set $base0F #e6b673
 
 
 ### Output configuration
-output DP-5 resolution 1920x1080 position 1920,0 bg ~/Pictures/wallpapers/bike1.png fill
-
+output DP-5 resolution 1920x1080 position 0,0 bg ~/Pictures/wallpapers/bike1.png fill
 
 ### Input configuration
 input "type:keyboard" {
