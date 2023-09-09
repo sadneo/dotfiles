@@ -23,9 +23,9 @@ export KITTY_ENABLE_WAYLAND=1
 #------------------------------
 # Alias stuff
 #------------------------------
-alias tree="eza -T --git-ignore"
-alias ls="eza"
-alias ll="eza -lh"
+alias tree="eza -T --sort type --git-ignore"
+alias ls="eza --sort type"
+alias ll="eza -lh --sort type"
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias vi="nvim"
 alias vim="nvim"
