@@ -10,6 +10,7 @@ return {
             require("neorg").setup {
                 load = {
                     ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.concealer"] = {},
                     ["core.keybinds"] = {
                         config = {
                             hook = function(keybinds)
