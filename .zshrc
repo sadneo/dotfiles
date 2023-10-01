@@ -10,7 +10,7 @@
 #------------------------------
 # Variables
 #------------------------------
-export PATH="${PATH}:${HOME}/.local/bin"
+export PATH="${PATH}:${HOME}/.local/bin:${XDG_CONFIG_DIR}/emacs/bin"
 export EDITOR="nvim"
 export BROWSER="chromium"
 export GTK_THEME="tokyonight"
