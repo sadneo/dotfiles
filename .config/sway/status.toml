@@ -28,24 +28,6 @@ button = "left"
 update = true
 
 [[block]]
-block = "cpu"
-format = " $icon $utilization "
-interval = 1
-
-[[block]]
-block = "memory"
-format = " $icon $mem_total_used_percents.eng(w:2) "
-format_alt = " $icon_swap $swap_used_percents.eng(w:2) "
-
-[[block]]
-block = "disk_space"
-path = "/"
-format = " $path $available "
-format_alt = " $path $percentage "
-info_type = "available"
-alert_unit = "GB"
-
-[[block]]
 block = "music"
 format = " $icon $volume "
 player = "spotify"
