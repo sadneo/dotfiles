@@ -39,7 +39,7 @@ input "type:keyboard" {
 bar {
 	status_command i3status-rs ~/.config/sway/status.toml
     position top
-    font pango: SourceCodePro, FontAwesome6Free 10
+    font pango: SourceCodePro, FontAwesome6Free 11
     separator_symbol "|"
 	tray_output none
 
