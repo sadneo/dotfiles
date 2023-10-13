@@ -28,6 +28,21 @@ button = "left"
 update = true
 
 [[block]]
+block = "backlight"
+device = "intel_backlight"
+missing_format = ""
+cycle = [20]
+
+[[block]]
+block = "battery"
+device = "BAT0"
+driver = "upower"
+format = " $icon $percentage "
+charging_format = " $icon $percentage $time "
+not_charging_format = " $icon $percentage $time "
+missing_format = ""
+
+[[block]]
 block = "music"
 format = " $icon $volume "
 player = "spotify"
