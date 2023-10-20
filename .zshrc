@@ -108,7 +108,20 @@ zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-staged-changes true
 zstyle ':vcs_info:git*' formats "%m%u%c%F{red}[%r/%S]%f%F{yellow}[%b]%f"
 
-setopt PROMPT_SUBST
-PROMPT="%F{green}[%n@%m]%f%F{cyan}[%~]%f%(!.#.$) "
-RPROMPT=$'${vcs_info_msg_0_}'
+function check_git_status() {
+    git_status=$(git status --porcelain 2> /dev/null | tail -n1)
+    git_star=""
+    if [[ -n $git_status ]]; then
+        git_star="%F{red}*%f"
+    fi
+    echo $git_star
+}
 
+setopt prompt_subst
+function set_prompt() {
+    PROMPT="$(check_git_status)%F{green}[%n@%m]%f%F{cyan}[%~]%f%(!.#.$) "
+    RPROMPT=$'${vcs_info_msg_0_}'
+}
+
+precmd_functions+=set_prompt
+set_prompt
