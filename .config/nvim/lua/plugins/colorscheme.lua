@@ -14,9 +14,14 @@ return {
 				},
 			})
 
-			vim.cmd.colorscheme("ayu")
+			-- vim.cmd.colorscheme("ayu")
 		end,
 	},
+    { "stevedylandev/flexoki-nvim", lazy = false,
+        config = function()
+            vim.cmd.colorscheme("flexoki")
+        end,
+    },
 	{ "folke/tokyonight.nvim", lazy = true, },
 	{ "rebelot/kanagawa.nvim", lazy = true, },
 }
