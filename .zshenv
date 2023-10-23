@@ -1,9 +1,20 @@
 export PATH="${PATH}:${HOME}/.local/bin:${XDG_CONFIG_DIR}/emacs/bin"
 export EDITOR="nvim"
 export BROWSER="chromium"
-export GTK_THEME="tokyonight"
 export QT_QPA_PLATFORM="wayland"
 
 export ANKI_WAYLAND=1
 export GOPATH="$HOME/.go"
 export KITTY_ENABLE_WAYLAND=1
+
+export XDG_DATA_HOME="${XDG_DATA_HOME:-/home/aidan/.local/share}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-/home/aidan/.config}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-/home/aidan/.cache}"
+
+alias wget="wget --hsts-file="${XDG_CACHE_HOME}/wget-hsts""
+export PARALLEL_HOME="${XDG_CONFIG_HOME}/parallel"
+export RUSTUP_HOME="${XDG_DATA_HOME}/rustup"
+export CARGO_HOME="${XDG_DATA_HOME}/cargo"
+export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
+export _JAVA_OPTIONS="-Djava.util.prefs.userRoot="$XDG_CONFIG_HOME"/java"
