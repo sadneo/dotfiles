@@ -80,7 +80,7 @@ exec {
 exec mako
 
 # Applications
-set $term foot
+set $term kitty
 set $menu bemenu-run -i -l 20 -fn "Fira Mono 10" --fb "$base00" --ff "$base0C" --nb "$base00" --nf "$base05" --tb "$base00" --hb "$base00" --tf "$base0D" --hf "$base0E" --af "$base05" --ab "$base00"
 
 ### Keybinds
