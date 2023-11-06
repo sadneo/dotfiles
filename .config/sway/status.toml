@@ -3,11 +3,11 @@ icons_format = "{icon}"
 [theme]
 theme = "native"
 [theme.overrides]
-idle_fg = "#e6e1cf"
-info_fg = "#59c2ff"
-good_fg = "#b8cc52"
-warning_fg = "#ffb454"
-critical_fg = "#f07178"
+idle_fg = "#CECDC3"
+info_fg = "#CECDC3"
+good_fg = "#66800B"
+warning_fg = "#AD8301"
+critical_fg = "#AF3029"
 
 [icons]
 icons = "awesome6"
