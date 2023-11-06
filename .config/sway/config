@@ -59,8 +59,8 @@ bar {
 
     colors {
         background $black
-        separator $value_200
-        statusline $paper
+        separator $value_800
+        statusline $black
         # border, bg, text
         focused_workspace	$black $light_blue $black
         active_workspace	$black $blue $paper
