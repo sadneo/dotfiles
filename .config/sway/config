@@ -1,21 +1,36 @@
 # Colors
-set $base00 #0f1419
-set $base01 #131721
-set $base02 #272d38
-set $base03 #3e4b59
-set $base04 #bfbdb6
-set $base05 #e6e1cf
-set $base06 #e6e1cf
-set $base07 #f3f4f5
-set $base08 #f07178
-set $base09 #ff8f40
-set $base0A #ffb454
-set $base0B #b8cc52
-set $base0C #95e6cb
-set $base0D #59c2ff
-set $base0E #d2a6ff
-set $base0F #e6b673
+set $black #100F0F
+set $paper #FFFCF0
+set $value_950 #1C1B1A
+set $value_900 #282726
+set $value_850 #343331
+set $value_800 #403E3C
+set $value_700 #575653
+set $value_600 #6F6E69
+set $value_500 #878580
+set $value_300 #B7B5AC
+set $value_200 #CECDC3
+set $value_150 #DAD8CE
+set $value_100 #E6E4D9
+set $value_50 #F2F0E5
 
+set $red #AF3029
+set $orange #BC5215
+set $yellow #AD8301
+set $green #66800B
+set $cyan #24837B
+set $blue #205EA6
+set $purple #5E409D
+set $magenta #A02F6F
+
+set $light_red #D14D41
+set $light_orange #DA702C
+set $light_yellow #D0A215
+set $light_green #879A39
+set $light_cyan #3AA99F
+set $light_blue #4385BE
+set $light_purple #8B7EC8
+set $light_magenta #CE5D97
 
 ### Output configuration
 output DP-3 resolution 1920x1080 position 1920,0 bg ~/Pictures/wallpapers/bike1.png fill
@@ -43,32 +58,30 @@ bar {
 	tray_output none
 
     colors {
-        background $base00
-        separator $base03
-        statusline $base04
+        background $black
+        separator $value_200
+        statusline $paper
         # border, bg, text
-        focused_workspace	$base00	$base0D $base00
-        active_workspace	$base00 $base02 $base05
-        inactive_workspace	$base00 $base00 $base05
-        urgent_workspace	$base00 $base08 $base00
-		binding_mode        $base00 $base08 $base00
+        focused_workspace	$black $light_blue $black
+        active_workspace	$black $blue $paper
+        inactive_workspace	$black $black $paper
+        urgent_workspace	$black $red $black
+		binding_mode        $black $red $black
     }
 }
 
 
 ### Theming:
-default_border pixel 1
-default_floating_border normal
+default_border pixel 2
+default_floating_border pixel 2
 hide_edge_borders smart
 font pango: monospace 10
 
-# Colors                border  bg		text	indi	childborder
-client.focused          $base00 $base0D	$base00 $base0D $base0D
-client.focused_inactive $base00 $base02	$base05 $base03 $base01
-client.unfocused        $base00 $base00	$base05	$base01 $base01
-client.urgent           $base00 $base08 $base00	$base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base07
+# Colors                border  bg          text    indi	childborder
+client.focused          $black  $blue	    $black  $blue   $value_700
+client.focused_inactive $black  $blue       $paper  $black  $value_800
+client.unfocused        $black  $black	    $paper	$black  $value_850
+client.urgent           $black  $red        $black	$black  $value_850
 
 set $gnome-schema org.gnome.desktop.interface
 exec {
@@ -81,8 +94,8 @@ exec {
 exec mako
 
 # Applications
-set $term foot
-set $menu bemenu-run -i -l 20 -fn "Fira Mono 10" --fb "$base00" --ff "$base0C" --nb "$base00" --nf "$base05" --tb "$base00" --hb "$base00" --tf "$base0D" --hf "$base0E" --af "$base05" --ab "$base00"
+set $term kitty
+set $menu bemenu-run -i -l 20 -fn "Fira Mono 10" --fb "$black" --ff "$value_100" --nb "$black" --nf "$paper" --tb "$black" --hb "$black" --tf "$orange" --hf "$red" --af "$paper" --ab "$black"
 
 ### Keybinds
 set $mod Mod4
