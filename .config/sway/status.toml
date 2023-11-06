@@ -46,8 +46,8 @@ block = "battery"
 device = "BAT0"
 driver = "upower"
 format = " $icon $percentage "
-charging_format = " $icon $percentage $time "
-not_charging_format = " $icon $percentage $time "
+charging_format = " $icon $percentage "
+not_charging_format = " $icon $percentage "
 missing_format = ""
 
 [[block]]
