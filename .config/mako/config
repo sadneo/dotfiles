@@ -1,21 +1,21 @@
 font=Fira Mono 11
 history=0
-default-timeout=5000
+default-timeout=8000
 ignore-timeout=1
 anchor=bottom-right
-border-size=1
+border-size=2
 
-background-color=#0F1419
-text-color=#E6E1CF
-border-color=#59C2FF
+background-color=#100F0F
+text-color=#F2F0E5
+border-color=#343331
 
 [urgency=low]
-background-color=#0F1419
-text-color=#FFB454
-border-color=#59C2FF
+background-color=#100F0F
+text-color=#AD8301
+border-color=#343331
 
 [urgency=high]
-background-color=#0F1419
-text-color=#F07178
-border-color=#59C2FF
+background-color=#100F0F
+text-color=#AF3029
+border-color=#343331
 
