@@ -1,27 +1,36 @@
 daemonize
 ignore-empty-password
+
+color=100F0F
 scaling=fill
-indicator-radius=150
-indicator-thickness=0
 
-# COLOUR (base16)
-color=0F1419
-bs-hl-color=E6B673
-caps-lock-bs-hl-color=E6B673
-caps-lock-key-hl-color=B8CC52
-key-hl-color=B8CC52
-inside-clear-color=3E4B59
-inside-ver-color=3E4B59
-inside-wrong-color=F07178
-ring-wrong-color=F07178
-ring-color=FFB454
-ring-caps-lock-color=FFB454
-ring-clear-color=95E6CB
-text-clear-color=95E6CB
-ring-ver-color=59C2FF
-text-color=E6E1CF
-text-caps-lock-color=E6E1CF
-text-ver-color=E6E1CF
-text-wrong-color=E6E1CF
+font=Noto Sans
+indicator-x-position=80
+indicator-y-position=1000
+indicator-radius=50
+indicator-thickness=10
 
+inside-color=100F0F
+inside-clear-color=205EA6
+inside-caps-lock-color=205EA6
+inside-ver-color=205EA6
+inside-wrong-color=AF3029
+
+text-color=FFFCF0
+text-clear-color=FFFCF0
+text-caps-lock-color=FFFCF0
+text-ver-color=FFFCF0
+text-wrong-color=FFFCF0
+
+ring-color=AD8301
+ring-clear-color=205EA6
+ring-caps-lock-color=AD8301
+ring-ver-color=205EA6
+ring-wrong-color=AF3029
+seperator-color=100F0F
+
+key-hl-color=66800B
+bs-hl-color=AD8301
+caps-lock-key-hl-color=66800B
+caps-lock-bs-hl-color=AD8301
 
