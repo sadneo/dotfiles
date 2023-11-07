@@ -16,13 +16,13 @@ icons = "awesome6"
 block = "pacman"
 signal = 5
 interval = 600
-error_interval = 300
+error_interval = 1200
 format = " $icon $both "
 format_singular = " $icon $both "
 format_up_to_date = " $icon $both "
 warning_updates_regex = "(linux|linux-lts|linux-zen)"
 aur_command = "paru -Qua"
-error_format = "update query error"
+error_format = ""
 [[block.click]]
 button = "left"
 update = true
