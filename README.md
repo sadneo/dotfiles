@@ -6,12 +6,12 @@ Dotfiles for my arch install
 * Launcher: bemenu
 * Bar: swaybar using i3blocks-rs
 * Text editor: neovim
-* Terminal: foot
+* Terminal: foot / kitty
 * Shell: zsh
 * Notifications: mako
-* Theme: ayu-dark
-    * GTK: https://github.com/tinted-theming/base16-gtk-flatcolor
-    * Icons: Qogir
+* Theme: flexoki
+    * GTK: plata-dark
+    * Icons: Papirus
 
 ### Installation
 ```sh
@@ -30,7 +30,7 @@ alias dotfiles="/usr/bin/env git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 compdef dotfiles=git
 
 dotfiles remote add origin https://github.com/sadneo/dotfiles
-dotfiles push --set-upstream origin master
+dotfiles push --set-upstream origin main
 ```
 
 ### Backup
