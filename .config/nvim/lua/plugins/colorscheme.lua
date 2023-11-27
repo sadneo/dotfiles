@@ -2,24 +2,15 @@ vim.o.background = "dark" -- ayu uses this
 
 return {
 	{
-		"Shatur/neovim-ayu",
-		lazy = false,
+		"ayu-theme/ayu-vim",
+		lazy = true,
 		config = function()
-			local colors = require('ayu.colors')
-			colors.generate() -- Pass `true` to enable mirage
-
-			require('ayu').setup({
-				overrides = {
-					LineNr = { fg = colors.guide_active },
-				},
-			})
-
-			-- vim.cmd.colorscheme("ayu")
+            vim.g.ayucolor = "dark"
 		end,
 	},
-    { "stevedylandev/flexoki-nvim", lazy = false,
+    { "kepano/flexoki-neovim", name = "flexoki", lazy = false,
         config = function()
-            vim.cmd.colorscheme("flexoki")
+            vim.cmd.colorscheme("flexoki-dark")
         end,
     },
 	{ "folke/tokyonight.nvim", lazy = true, },
