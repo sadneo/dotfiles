@@ -33,7 +33,11 @@ set $light_purple #8B7EC8
 set $light_magenta #CE5D97
 
 ### Output configuration
-output DP-5 resolution 1920x1080 position 0,0 bg ~/Pictures/wallpapers/LismoreCastle.png fill
+output DP-5 {
+    mode 1920x1080@164.997Hz
+    position 0,0
+    bg ~/Pictures/wallpapers/LismoreCastle.png fill
+}
 
 # exec swayidle -w \
 # 	timeout 300 "notify-send sway 'idling soon'" \
