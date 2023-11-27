@@ -109,6 +109,10 @@ bindsym $mod+Shift+x exec "swaylock"
 bindsym $mod+Shift+r exec "systemctl suspend"
 bindsym --whole-window BTN_EXTRA exec "playerctl next"
 bindsym --whole-window BTN_SIDE exec "playerctl play-pause"
+
+bindsym --whole-window $mod+button9 exec xdotool click --window $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .window') --repeat 600000 --delay 700 1
+bindsym --whole-window $mod+button8 exec pkill xdotool
+
 # Media keys
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
