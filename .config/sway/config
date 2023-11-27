@@ -62,11 +62,11 @@ bar {
         separator $value_800
         statusline $value_200
         # border, bg, text
-        focused_workspace	$black $blue $black
-        active_workspace	$black $green $paper
-        inactive_workspace	$black $black $paper
-        urgent_workspace	$black $red $black
-		binding_mode        $black $red $black
+        focused_workspace	$black $value_900 $paper
+        active_workspace	$black $value_950 $paper
+        inactive_workspace	$black $black $value_500
+        urgent_workspace	$black $red $paper
+		binding_mode        $black $black $red
     }
 }
 
