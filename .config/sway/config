@@ -55,7 +55,9 @@ bar {
     position top
     font pango: Fira Mono, FontAwesome6Free 11
     separator_symbol "|"
-	tray_output none
+    workspace_min_width 25
+	tray_output *
+    icon_theme Papirus
 
     colors {
         background $black
