@@ -36,11 +36,8 @@ error_format = ""
 button = "left"
 cmd = "playerctl play-pause"
 [[block.click]]
-button = "forward"
+button = "right"
 cmd = "playerctl next"
-[[block.click]]
-button = "backward"
-cmd = "playerctl previous"
 [[block.click]]
 button = "up"
 cmd = "playerctl volume 0.01+"
