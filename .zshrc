@@ -93,7 +93,7 @@ colors
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' check-for-staged-changes true
-zstyle ':vcs_info:git*' formats "%m%u%c%F{red}[%r/%S]%f%F{yellow}[%b]%f"
+zstyle ':vcs_info:git*' formats '%F{red}[%b]%f'
 
 function check_git_status() {
     git_status=$(git status --porcelain 2> /dev/null | tail -n1)
@@ -104,11 +104,8 @@ function check_git_status() {
     echo $git_star
 }
 
+function precmd() { vcs_info }
 setopt prompt_subst
-function set_prompt() {
-    PROMPT="$(check_git_status)%F{green}[%n@%m]%f%F{cyan}[%~]%f%(!.#.$) "
-    RPROMPT=$'${vcs_info_msg_0_}'
-}
 
-precmd_functions+=set_prompt
-set_prompt
+PROMPT='$(check_git_status)%F{green}[%n@%m]%f%F{cyan}[%~]%f%(!.#.$) '
+RPROMPT='${vcs_info_msg_0_}'
