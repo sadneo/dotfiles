@@ -108,4 +108,3 @@ function precmd() { vcs_info }
 setopt prompt_subst
 
 PROMPT='$(check_git_status)${vcs_info_msg_0_}%F{cyan}[%~]%f%(!.#.$) '
-RPROMPT='${vcs_info_msg_0_}'
