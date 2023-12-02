@@ -15,3 +15,4 @@ opt.relativenumber = true
 opt.foldenable = false
 opt.foldmethod = "syntax"
 
+opt.wrap = false

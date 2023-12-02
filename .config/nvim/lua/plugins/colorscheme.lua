@@ -1,4 +1,4 @@
-vim.o.background = "dark" -- ayu uses this
+vim.o.background = "dark"
 
 return {
 	{
@@ -13,6 +13,7 @@ return {
             vim.cmd.colorscheme("flexoki-dark")
         end,
     },
+	{ "ellisonleao/gruvbox.nvim", lazy = true, },
 	{ "folke/tokyonight.nvim", lazy = true, },
 	{ "rebelot/kanagawa.nvim", lazy = true, },
 }
