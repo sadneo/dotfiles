@@ -20,7 +20,7 @@ alias vim="nvim"
 #------------------------------
 # History stuff
 #------------------------------
-HISTFILE=~/.histfile
+HISTFILE="$XDG_STATE_HOME/zsh/history"
 HISTSIZE=1000
 SAVEHIST=1000
 
@@ -42,7 +42,7 @@ bindkey "^W" backward-kill-bash-word
 #------------------------------
 zmodload zsh/complist 
 autoload -Uz compinit
-compinit
+compinit -d "$XDG_CACHE_HOME/zsh/zcompdump"
 zstyle :compinstall filename '${HOME}/.zshrc'
 compdef dotfiles=git
 
