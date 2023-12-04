@@ -1,6 +1,5 @@
 /**
 !/README.md
-!/README.txt
 !/.gitignore
 
 !/.local
@@ -30,5 +29,3 @@
 !/.config/zathura/**
 !/.config/zsh
 !/.config/zsh/**
-!/.config/penis
-!/.config/penis/**
