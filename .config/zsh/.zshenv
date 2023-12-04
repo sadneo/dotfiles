@@ -1,14 +1,15 @@
-export PATH="${PATH}:${HOME}/.local/bin:${XDG_CONFIG_DIR}/emacs/bin"
+export PATH="${PATH}:${HOME}/.local/bin"
 export EDITOR="nvim"
 export BROWSER="chromium"
-export QT_QPA_PLATFORM="wayland"
 
+export QT_QPA_PLATFORM="wayland"
 export ANKI_WAYLAND=1
 export KITTY_ENABLE_WAYLAND=1
 export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 export XDG_DATA_HOME="${XDG_DATA_HOME:-/home/aidan/.local/share}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-/home/aidan/.local/state}"
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-/home/aidan/.config}"
 export XDG_CACHE_HOME="${XDG_CACHE_HOME:-/home/aidan/.cache}"
 
