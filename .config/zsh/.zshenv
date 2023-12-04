@@ -1,6 +1,7 @@
 export PATH="${PATH}:${HOME}/.local/bin"
 export EDITOR="nvim"
-export BROWSER="chromium"
+export BROWSER="firefox"
+export QT_STYLE_OVERRIDE="kvantum"
 
 export QT_QPA_PLATFORM="wayland"
 export ANKI_WAYLAND=1
