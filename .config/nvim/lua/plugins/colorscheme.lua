@@ -13,6 +13,7 @@ return {
             vim.cmd.colorscheme("flexoki-dark")
         end,
     },
+	{ "rose-pine/neovim", lazy = true, },
 	{ "ellisonleao/gruvbox.nvim", lazy = true, },
 	{ "folke/tokyonight.nvim", lazy = true, },
 	{ "rebelot/kanagawa.nvim", lazy = true, },
