@@ -63,19 +63,3 @@ cmd = "pactl set-sink-mute @DEFAULT_SINK@ toggle"
 block = "time"
 format = " $icon $timestamp.datetime(f:'%a %m/%d %H:%M:%S') "
 interval = 1
-
-[[block]]
-block = "menu"
-text = " \uf011 "
-[[block.items]]
-display = " sleep "
-cmd = "systemctl suspend"
-confirm_msg = " sleep?"
-[[block.items]]
-display = " poweroff "
-cmd = "poweroff"
-confirm_msg = " poweroff?"
-[[block.items]]
-display = " reboot "
-cmd = "reboot"
-confirm_msg = " reboot?"
