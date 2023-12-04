@@ -13,6 +13,7 @@
 !/.config/git/**
 !/.config/kitty
 !/.config/kitty/**
+/.config/kitty/kitty.conf.bak
 !/.config/mako
 !/.config/mako/**
 !/.config/neofetch
