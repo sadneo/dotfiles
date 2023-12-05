@@ -1,12 +1,9 @@
-daemonize
 ignore-empty-password
 
 color=100F0F
 scaling=fill
 
 font=Noto Sans
-indicator-x-position=80
-indicator-y-position=1000
 indicator-radius=50
 indicator-thickness=10
 
