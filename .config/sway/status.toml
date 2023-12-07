@@ -50,6 +50,10 @@ block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
 [[block]]
+block = "net"
+format = " $icon $ssid $signal_strength "
+
+[[block]]
 block = "sound"
 step_width = 1
 [[block.click]]
