@@ -1,35 +1,4 @@
-# Base16 ayu-dark
-# Author: Lalit Magant (http://github.com/tilal6991)
-
-set default-bg                  "#0F1419"
-set default-fg                  "#131721"
-
-set statusbar-fg                "#BFBDB6"
-set statusbar-bg                "#272D38"
-
-set inputbar-bg                 "#0F1419"
-set inputbar-fg                 "#F3F4F5"
-
-set notification-bg             "#0F1419"
-set notification-fg             "#F3F4F5"
-
-set notification-error-bg       "#0F1419"
-set notification-error-fg       "#F07178"
-
-set notification-warning-bg     "#0F1419"
-set notification-warning-fg     "#F07178"
-
-set highlight-color             "#FFB454"
-set highlight-active-color      "#59C2FF"
-
-set completion-bg               "#131721"
-set completion-fg               "#59C2FF"
-
-set completion-highlight-fg     "#F3F4F5"
-set completion-highlight-bg     "#59C2FF"
-
-set recolor-lightcolor          "#0F1419"
-set recolor-darkcolor           "#E6E1CF"
-
 set recolor                     "true"
 set recolor-keephue             "true"
+
+include flexoki-dark
