@@ -1,17 +1,40 @@
 return {
-    {
-        "williamboman/mason.nvim",
+    { "williamboman/mason.nvim",
         priority = 20,
         config = true,
     },
-    {
-        "williamboman/mason-lspconfig.nvim",
+    { "williamboman/mason-lspconfig.nvim",
         priority = 25,
         config = true,
     },
-	"neovim/nvim-lspconfig",
-	{
-        "hrsh7th/nvim-cmp",
+    { "neovim/nvim-lspconfig",
+        config = function()
+            require("lspconfig").rust_analyzer.setup({
+                on_attach = function(client)
+                    require("completion").on_attach(client)
+                end,
+                settings = {
+                    ["rust-analyzer"] = {
+                        cargo = {
+                            features = "all",
+                            buildScripts = {
+                                enable = true,
+                            },
+                        },
+                        checkOnSave = {
+                            features = "all",
+                            command = "clippy",
+                            extraArgs = { "--no-deps" },
+                        },
+                        procMacro = {
+                            enable = true
+                        },
+                    }
+                }
+            })
+        end,
+    },
+	{ "hrsh7th/nvim-cmp",
         priority = 30,
         dependencies = {
             "hrsh7th/cmp-path",
@@ -30,34 +53,6 @@ return {
                     },
                 })
             })
-
-            require("lspconfig").rust_analyzer.setup({
-                on_attach = function(client)
-                    require("completion").on_attach(client)
-                end,
-                settings = {
-                    ["rust-analyzer"] = {
-                        diagnostics = {
-                            enable = true,
-                        },
-                        imports = {
-                            granularity = {
-                                group = "module",
-                            },
-                            prefix = "self",
-                        },
-                        cargo = {
-                            buildScripts = {
-                                enable = true,
-                            },
-                        },
-                        procMacro = {
-                            enable = true
-                        },
-                    }
-                }
-            })
-
         end,
     },
 }
