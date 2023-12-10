@@ -4,10 +4,19 @@ return {
         config = true,
     },
     { "williamboman/mason-lspconfig.nvim",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "neovim/nvim-lspconfig"
+        },
         priority = 25,
         config = true,
     },
     { "neovim/nvim-lspconfig",
+        ft = "rust",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "williamboman/mason-lspconfig.nvim"
+        },
         config = function()
             require("lspconfig").rust_analyzer.setup({
                 on_attach = function(client)
