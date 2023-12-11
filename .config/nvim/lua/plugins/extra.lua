@@ -1,5 +1,4 @@
 return {
-    "folke/lazy.nvim",
     {
         "folke/persistence.nvim",
         event = "BufReadPre",
