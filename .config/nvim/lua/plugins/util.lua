@@ -9,7 +9,10 @@ return {
     {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
-        opts = { scope = { enabled = false } },
+        opts = {
+            exclude = { filetypes = { "norg" } },
+            scope = { enabled = false },
+        },
     },
     { "lewis6991/gitsigns.nvim", config = true },
     {
