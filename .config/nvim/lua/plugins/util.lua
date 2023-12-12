@@ -7,6 +7,12 @@ return {
         end,
     },
     {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = { scope = { enabled = false } },
+    },
+    { "lewis6991/gitsigns.nvim", config = true },
+    {
         "folke/persistence.nvim",
         event = "BufReadPre",
         opts = { options = vim.opt.sessionoptions:get() },
