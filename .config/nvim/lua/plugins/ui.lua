@@ -36,7 +36,7 @@ return {
         event = "VeryLazy",
         opts = {
             options = {
-                theme = "ayu_dark",
+                theme = "rose-pine",
                 globalstatus = true,
                 component_separators = { left = "|", right = "|"},
                 section_separators = { left = "", right = ""},

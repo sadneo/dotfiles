@@ -87,7 +87,7 @@ exec_always {
 }
 
 exec mako
-exec foot --server
+exec_always foot --server
 
 # Applications
 set $term footclient
