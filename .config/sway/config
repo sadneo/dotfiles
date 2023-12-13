@@ -86,6 +86,7 @@ exec_always {
 }
 
 exec mako
+exec_always foot --server
 
 # Applications
 set $term kitty
