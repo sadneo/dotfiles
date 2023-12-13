@@ -20,6 +20,14 @@ return {
         event = "BufReadPre",
         opts = { options = vim.opt.sessionoptions:get() },
     },
-    { "numToStr/Comment.nvim", config = true },
-    { "karb94/neoscroll.nvim", config = true },
+    {
+        "numToStr/Comment.nvim",
+        event = "VeryLazy",
+        config = true,
+    },
+    {
+        "karb94/neoscroll.nvim",
+        event = "VeryLazy",
+        config = true,
+    },
 }
