@@ -4,7 +4,6 @@ vim.keymap.set("n", "i", function()
 end, {expr=true, noremap=true})
 
 vim.keymap.set("n", "<Space>", "<NOP>")
-vim.keymap.set("n", "<Leader>e", ":Telescope find_files<CR>")
 vim.keymap.set({"n", "v"}, "<Leader>y", "\"+y")
 vim.keymap.set({"n", "v"}, "<Leader>p", "\"+p")
 

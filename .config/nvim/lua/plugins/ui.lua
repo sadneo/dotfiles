@@ -1,6 +1,7 @@
 return {
     {
         "goolord/alpha-nvim",
+        event = "VimEnter",
         config = function()
             local dashboard = require("alpha.themes.dashboard")
 
@@ -61,10 +62,18 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
+        cmd = "Telescope",
+        keys = {
+            {
+                "<Leader>e", function()
+                    require("telescope.builtin").find_files()
+                end,
+            },
+        },
         opts = {
             defaults = {
                 borderchars = { '─', '│', '─', '│', '┌', '┐', '┘', '└' },
-            }
-        }
+            },
+        },
     },
 }
