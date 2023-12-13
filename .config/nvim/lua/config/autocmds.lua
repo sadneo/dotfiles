@@ -6,6 +6,13 @@ vim.api.nvim_create_autocmd({"BufEnter"}, {
     end,
 })
 
+vim.api.nvim_create_autocmd({"FileType"}, {
+    pattern = "text",
+    callback = function()
+        vim.opt.textwidth = 80
+    end,
+})
+
 vim.api.nvim_create_autocmd({"BufWinLeave"}, {
     pattern = "?*",
     command = "mkview",
