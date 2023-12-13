@@ -9,9 +9,9 @@ return {
         keys = {
             {
                 "<Leader>t", function()
-                    vim.keymap.set("n", "<Leader>t", ":Neorg toggle-concealer<CR>")
+                    vim.cmd("Neorg toggle-concealer")
                 end,
-            }
+            },
         },
         opts = {
             load = {
@@ -34,7 +34,7 @@ return {
                         default_workspace = "notes",
                     },
                 },
-            }
-        }
+            },
+        },
     },
 } 
