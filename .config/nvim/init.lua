@@ -5,7 +5,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-
 require("config.options")
 require("lazy").setup({
     spec = {
@@ -35,6 +34,6 @@ require("lazy").setup({
     },
 })
 
-vim.cmd.colorscheme("flexoki-dark")
+vim.cmd.colorscheme("modus")
 require("config.autocmds")
 require("config.keymaps")
