@@ -80,11 +80,8 @@ format = " $icon $ssid $signal_strength "
 block = "sound"
 step_width = 1
 [[block.click]]
-button = "left"
-cmd = "pavucontrol"
-[[block.click]]
 button = "right"
-cmd = "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+cmd = "amixer set Master toggle"
 
 [[block]]
 block = "time"
