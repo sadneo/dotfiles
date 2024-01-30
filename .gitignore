@@ -2,6 +2,10 @@
 !/README.md
 !/.gitignore
 
+!/.zprofile
+!/.zshenv
+!/.zshrc
+
 !/.local
 !/.local/bin
 !/.local/bin/*
@@ -33,7 +37,3 @@
 !/.config/zathura
 !/.config/zathura/zathurarc
 !/.config/zathura/flexoki-dark
-!/.config/zsh
-!/.config/zsh/.zprofile
-!/.config/zsh/.zshenv
-!/.config/zsh/.zshrc
