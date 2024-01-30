@@ -35,6 +35,7 @@ set $light_magenta #CE5D97
 ### Output configuration
 output eDP-1 resolution 1920x1080 position 0,0 bg ~/Pictures/wallpapers/LismoreCastle.png fill
 
+bindswitch --locked lid:off "loginctl suspend"
 
 ### Input configuration
 input "type:keyboard" {
@@ -107,6 +108,7 @@ floating_modifier $mod normal
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy -t image/png
 bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 bindsym $mod+Shift+x exec "swaylock"
+bindsym $mod+Shift+r exec "loginctl suspend"
 
 bindsym --whole-window $mod+button9 exec xdotool click --window $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .window') --repeat 600000 --delay 10 1
 bindsym --whole-window $mod+button8 exec pkill xdotool
