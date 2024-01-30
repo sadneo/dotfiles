@@ -34,7 +34,6 @@ set $light_magenta #CE5D97
 
 ### Output configuration
 
-bindswitch --locked lid:off "systemctl suspend"
 
 ### Input configuration
 input "type:keyboard" {
@@ -107,7 +106,6 @@ floating_modifier $mod normal
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy -t image/png
 bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 bindsym $mod+Shift+x exec "swaylock"
-bindsym $mod+Shift+r exec "systemctl suspend"
 
 bindsym --whole-window $mod+button9 exec xdotool click --window $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .window') --repeat 600000 --delay 700 1
 bindsym --whole-window $mod+button8 exec pkill xdotool
