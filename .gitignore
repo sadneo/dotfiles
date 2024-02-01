@@ -21,8 +21,6 @@
 /.config/kitty/kitty.conf.bak
 !/.config/mako
 !/.config/mako/config
-!/.config/neofetch
-!/.config/neofetch/config.conf
 !/.config/nvim
 !/.config/nvim/**
 !/.config/sioyek
