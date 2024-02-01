@@ -81,7 +81,7 @@ block = "sound"
 step_width = 1
 [[block.click]]
 button = "right"
-cmd = "amixer set Master toggle"
+cmd = "wpctl set-mute @DEFAULT_SINK@ toggle"
 
 [[block]]
 block = "time"
