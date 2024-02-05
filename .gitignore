@@ -2,6 +2,10 @@
 !/README.md
 !/.gitignore
 
+!/.zprofile
+!/.zshenv
+!/.zshrc
+
 !/.local
 !/.local/bin
 !/.local/bin/*
@@ -17,8 +21,6 @@
 /.config/kitty/kitty.conf.bak
 !/.config/mako
 !/.config/mako/config
-!/.config/neofetch
-!/.config/neofetch/config.conf
 !/.config/nvim
 !/.config/nvim/**
 !/.config/sioyek
@@ -33,7 +35,3 @@
 !/.config/zathura
 !/.config/zathura/zathurarc
 !/.config/zathura/flexoki-dark
-!/.config/zsh
-!/.config/zsh/.zprofile
-!/.config/zsh/.zshenv
-!/.config/zsh/.zshrc
