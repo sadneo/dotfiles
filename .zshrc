@@ -18,7 +18,7 @@ alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 #------------------------------
 # History stuff
 #------------------------------
-HISTFILE="$XDG_STATE_HOME/zsh/history"
+HISTFILE="$XDG_STATE_HOME/zhistory"
 HISTSIZE=1000
 SAVEHIST=1000
 
