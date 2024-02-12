@@ -67,7 +67,17 @@ return {
         keys = {
             {
                 "<Leader>e", function()
-                    require("telescope.builtin").find_files()
+                    local dirman = require("neorg").modules.loaded_modules["core.dirman"].public
+                    local workspace = dirman.get_current_workspace()
+                    local path = nil
+
+                    if workspace[1] ~= "default" then
+                        path = {workspace[2]}
+                    end
+
+                    require("telescope.builtin").find_files({
+                        search_dirs = path,
+                    })
                 end,
             },
         },
