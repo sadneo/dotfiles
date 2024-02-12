@@ -31,7 +31,6 @@ return {
                             notes = "~/Documents/notes",
                             personal = "~/Documents/personal",
                         },
-                        default_workspace = "notes",
                     },
                 },
             },
