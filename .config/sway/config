@@ -88,7 +88,7 @@ exec mako
 exec_always foot --server
 
 # Applications
-set $term kitty
+set $term footclient
 set $menu bemenu-run -i -l 20 -fn "Fira Mono 10" --fb "$black" --ff "$value_100" --nb "$black" --nf "$paper" --tb "$black" --hb "$black" --tf "$orange" --hf "$red" --af "$paper" --ab "$black"
 
 ### Keybinds
