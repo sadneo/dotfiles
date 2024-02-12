@@ -111,12 +111,10 @@ bindsym --whole-window $mod+button9 exec xdotool click --window $(swaymsg -t get
 bindsym --whole-window $mod+button8 exec pkill xdotool
 
 # Media keys
-bindsym XF86AudioRaiseVolume exec "pactl set-sink-volume @DEFAULT_SINK@ +2%"
-bindsym XF86AudioLowerVolume exec "pactl set-sink-volume @DEFAULT_SINK@ -2%"
-bindsym XF86AudioMute exec "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-bindsym XF86AudioMicMute exec "amixer set Capture toggle"
-bindsym XF86MonBrightnessUp exec "light -A 2"
-bindsym XF86MonBrightnessDown exec "light -U 2"
+bindsym XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%+"
+bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%-"
+bindsym XF86AudioMute exec "wpctl set-mute @DEFAULT_SINK@ toggle"
+bindsym XF86AudioMicMute exec "wpctl set-mute @DEFAULT_SOURCE@ toggle"
 bindsym XF86AudioPlay exec "playerctl play"
 bindsym XF86AudioPause exec "playerctl pause"
 
