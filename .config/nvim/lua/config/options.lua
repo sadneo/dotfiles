@@ -8,6 +8,7 @@ vim.g.netrw_bufsettings = "number relativenumber"
 
 local opt = vim.opt
 opt.confirm = true
+opt.autochdir = true
 
 opt.tabstop = 4
 opt.softtabstop = -1
