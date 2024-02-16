@@ -12,13 +12,7 @@ critical_fg = "#AF3029"
 [icons]
 icons = "awesome6"
 [icons.overrides]
-backlight = [
-    "󱩎",
-    "󱩐",
-    "󱩒",
-    "󱩔",
-    "󰛨",
-]
+backlight = ["\uf185"]
 
 [[block]]
 block = "pacman"
