@@ -51,7 +51,7 @@ mac = "30:53:C1:32:5F:3B"
 
 [[block]]
 block = "net"
-format = " $icon $ssid $signal_strength "
+format = " $icon $ssid "
 
 [[block]]
 block = "sound"
