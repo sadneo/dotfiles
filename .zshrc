@@ -13,7 +13,7 @@
 alias tree="eza -T --sort type --git-ignore"
 alias ls="eza --sort type"
 alias ll="eza -lh --sort type"
-alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 #------------------------------
 # History stuff

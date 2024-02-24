@@ -22,3 +22,4 @@ opt.foldenable = false
 opt.foldmethod = "syntax"
 
 opt.wrap = false
+opt.textwidth = 100
