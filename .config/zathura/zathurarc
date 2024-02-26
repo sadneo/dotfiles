@@ -1,6 +1,0 @@
-set recolor                     "true"
-set recolor-keephue             "true"
-
-set database "null"
-
-include flexoki-dark
