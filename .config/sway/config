@@ -44,11 +44,10 @@ input "type:keyboard" {
 bar {
 	status_command i3status-rs ~/.config/sway/status.toml
     position top
+    mode hide
     font pango: Fira Mono, FontAwesome6Free 11
     separator_symbol "|"
     workspace_min_width 25
-	tray_output none
-    icon_theme Papirus
 
     colors {
         background $black
