@@ -23,15 +23,9 @@
 !/.config/mako/config
 !/.config/nvim
 !/.config/nvim/**
-!/.config/sioyek
-!/.config/sioyek/keys_user.config
-!/.config/sioyek/prefs_user.config
 !/.config/sway
 !/.config/sway/**
 !/.config/swaylock
 !/.config/swaylock/config
 !/.config/swaynag
 !/.config/swaynag/config
-!/.config/zathura
-!/.config/zathura/zathurarc
-!/.config/zathura/flexoki-dark
