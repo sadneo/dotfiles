@@ -46,7 +46,6 @@ input "type:keyboard" {
 bar {
 	status_command i3status-rs ~/.config/sway/status.toml
     position top
-    mode hide
     font pango: Fira Mono, FontAwesome6Free 11
     separator_symbol "|"
     workspace_min_width 25
@@ -108,6 +107,7 @@ bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy -t image/png
 bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 bindsym $mod+Shift+x exec "swaylock"
 bindsym $mod+Shift+r exec "loginctl suspend"
+bindsym $mod+i bar mode toggle
 
 bindsym --whole-window $mod+button9 exec xdotool click --window $(swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused==true) | .window') --repeat 600000 --delay 10 1
 bindsym --whole-window $mod+button8 exec pkill xdotool
