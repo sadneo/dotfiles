@@ -1,4 +1,4 @@
-export PATH="${PATH}:${HOME}/.local/bin"
+export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.local/share/cargo/bin"
 export EDITOR="nvim"
 export BROWSER="firefox"
 export QT_STYLE_OVERRIDE="kvantum"
