@@ -69,7 +69,7 @@ hide_edge_borders smart
 font pango: monospace 10
 
 # Colors                border  bg          text    indi	childborder
-client.focused          $black  $blue	    $black  $blue   $value_700
+client.focused          $black  $blue	    $black  $blue   $blue
 client.focused_inactive $black  $blue       $paper  $black  $value_800
 client.unfocused        $black  $black	    $paper	$black  $value_850
 client.urgent           $black  $red        $black	$black  $value_850
