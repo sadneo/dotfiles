@@ -45,24 +45,6 @@ not_charging_format = " $icon $percentage "
 missing_format = ""
 
 [[block]]
-block = "music"
-format = " $icon $volume "
-player = "spotify"
-error_format = ""
-[[block.click]]
-button = "left"
-cmd = "playerctl play-pause"
-[[block.click]]
-button = "right"
-cmd = "playerctl next"
-[[block.click]]
-button = "up"
-cmd = "playerctl volume 0.01+"
-[[block.click]]
-button = "down"
-cmd = "playerctl volume 0.01-"
-
-[[block]]
 block = "bluetooth"
 mac = "30:53:C1:32:5F:3B"
 
