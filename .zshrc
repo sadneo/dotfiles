@@ -69,7 +69,7 @@ export LS_COLORS
 #------------------------------
 # ShellFuncs
 #------------------------------
-# -- coloured manuals
+# Colored Manuals
 man() {
   env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
@@ -81,6 +81,20 @@ man() {
     LESS_TERMCAP_us=$(printf "\e[1;32m") \
     man "$@"
 }
+
+# OSC 7 for foot
+autoload -U add-zsh-hook
+function osc7-pwd() {
+    emulate -L zsh
+    setopt extendedglob
+    local LC_ALL=C
+    printf '\e]7;file://%s%s\e\' $HOST ${PWD//(#m)([^@-Za-z&-;_~])/%${(l:2::0:)$(([##16]#MATCH))}}
+}
+
+function chpwd-osc7-pwd() {
+    (( ZSH_SUBSHELL )) || osc7-pwd
+}
+add-zsh-hook -Uz chpwd chpwd-osc7-pwd
 
 #------------------------------
 # Prompt
@@ -102,7 +116,10 @@ function check_git_status() {
     echo $git_star
 }
 
-function precmd() { vcs_info }
+function precmd() {
+    vcs_info
+    print -Pn "\e]133;A\e\\" # Prompt Jumping
+}
 setopt prompt_subst
 
 PROMPT='$(check_git_status)${vcs_info_msg_0_}%F{cyan}[%~]%f%(!.#.$) '
