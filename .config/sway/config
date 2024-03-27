@@ -123,6 +123,10 @@ bindsym XF86AudioMicMute exec "wpctl set-mute @DEFAULT_SOURCE@ toggle"
 bindsym XF86AudioPlay exec "playerctl play"
 bindsym XF86AudioPause exec "playerctl pause"
 
+# Keyboard keys
+bindsym XF86Launch5 exec "bluetoothctl connect 30:53:C1:32:5F:3B"
+bindsym XF86Launch6 exec "bluetoothctl disconnect 30:53:C1:32:5F:3B"
+
 bindsym $mod+d exec $menu
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
