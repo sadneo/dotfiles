@@ -45,10 +45,6 @@ not_charging_format = " $icon $percentage "
 missing_format = ""
 
 [[block]]
-block = "bluetooth"
-mac = "30:53:C1:32:5F:3B"
-
-[[block]]
 block = "net"
 format = " $icon $ssid "
 
