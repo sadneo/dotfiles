@@ -30,4 +30,7 @@ return {
         event = "VeryLazy",
         config = true,
     },
+    {
+        "andweeb/presence.nvim",
+    }
 }
