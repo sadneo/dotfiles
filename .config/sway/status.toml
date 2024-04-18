@@ -2,12 +2,6 @@ icons_format = "{icon}"
 
 [theme]
 theme = "native"
-[theme.overrides]
-idle_fg = "#CECDC3"
-info_fg = "#CECDC3"
-good_fg = "#66800B"
-warning_fg = "#AD8301"
-critical_fg = "#AF3029"
 
 [icons]
 icons = "awesome6"
