@@ -1,11 +1,14 @@
 return {
     {
+        "vhyrro/luarocks.nvim",
+        priority = 1000,
+        config = true,
+    },
+    {
         "nvim-neorg/neorg",
         ft = "norg",
         cmd = "Neorg",
-        priority = 30,
-        build = ":Neorg sync-parsers",
-        dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
+        dependencies = {"vhyrro/luarocks.nvim"},
         keys = {
             {
                 "<Leader>t", function()
@@ -15,7 +18,7 @@ return {
         },
         opts = {
             load = {
-                ["core.defaults"] = {}, -- Loads default behaviour
+                ["core.defaults"] = {},
                 ["core.concealer"] = {},
                 ["core.keybinds"] = {
                     config = {
@@ -25,7 +28,7 @@ return {
                     },
                 },
                 ["core.export"] = {},
-                ["core.dirman"] = { -- Manages Neorg workspaces
+                ["core.dirman"] = {
                     config = {
                         workspaces = {
                             notes = "~/Documents/notes",
