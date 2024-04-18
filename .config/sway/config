@@ -88,7 +88,11 @@ bindsym XF86MonBrightnessDown exec "doas xbacklight -5"
 bindsym XF86AudioPlay exec "playerctl play"
 bindsym XF86AudioPause exec "playerctl pause"
 
-bindsym $mod+d exec $menu
+# Keyboard keys
+bindsym XF86Tools exec "playerctl play-pause"
+bindsym XF86Launch5 exec "bluetoothctl connect 30:53:C1:32:5F:3B"
+bindsym XF86Launch6 exec "bluetoothctl disconnect 30:53:C1:32:5F:3B"
+
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
