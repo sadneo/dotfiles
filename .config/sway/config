@@ -57,7 +57,6 @@ exec_always foot --server
 
 # Applications
 set $term footclient
-set $menu bemenu-run -i -l 20 -fn "Fira Mono 10" --fb "$black" --ff "$value_100" --nb "$black" --nf "$paper" --tb "$black" --hb "$black" --tf "$orange" --hf "$red" --af "$paper" --ab "$black"
 
 ### Keybinds
 set $mod Mod4
@@ -93,7 +92,6 @@ bindsym XF86Tools exec "playerctl play-pause"
 bindsym XF86Launch5 exec "bluetoothctl connect 30:53:C1:32:5F:3B"
 bindsym XF86Launch6 exec "bluetoothctl disconnect 30:53:C1:32:5F:3B"
 
-bindsym $mod+d exec $menu
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
 bindsym $mod+Shift+c reload
