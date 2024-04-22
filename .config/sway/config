@@ -48,10 +48,9 @@ font pango: Fira Mono 10
 include $HOME/.config/sway/light.conf
 
 exec mako
-exec_always foot --server
 
 # Applications
-set $term footclient
+set $term foot
 
 ### Keybinds
 set $mod Mod4
