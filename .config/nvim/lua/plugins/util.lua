@@ -8,13 +8,18 @@ return {
     },
     {
         "lukas-reineke/indent-blankline.nvim",
+        event = "VeryLazy",
         main = "ibl",
         opts = {
             exclude = { filetypes = { "norg" } },
             scope = { enabled = false },
         },
     },
-    { "lewis6991/gitsigns.nvim", config = true },
+    {
+        "lewis6991/gitsigns.nvim",
+        event = "VeryLazy",
+        config = true
+    },
     {
         "folke/persistence.nvim",
         event = "BufReadPre",
@@ -32,5 +37,6 @@ return {
     },
     {
         "andweeb/presence.nvim",
+        event = "VeryLazy",
     }
 }
