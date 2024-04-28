@@ -9,12 +9,12 @@ return {
         "nvim-neorg/neorg",
         ft = "norg",
         cmd = "Neorg",
-        dependencies = {"vhyrro/luarocks.nvim"},
+        dependencies = { "vhyrro/luarocks.nvim" },
         keys = {
             {
                 "<Leader>t", function()
-                    vim.cmd("Neorg toggle-concealer")
-                end,
+                vim.cmd("Neorg toggle-concealer")
+            end,
             },
         },
         opts = {
@@ -40,4 +40,4 @@ return {
             },
         },
     },
-} 
+}

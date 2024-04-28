@@ -1,2 +1,1 @@
 return { "folke/lazy.nvim" }
-
