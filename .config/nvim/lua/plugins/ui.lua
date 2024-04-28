@@ -67,17 +67,52 @@ return {
         keys = {
             {
                 "<Leader>e", function()
-                    local dirman = require("neorg").modules.loaded_modules["core.dirman"].public
+                    local dirman = require("neorg").modules.get_module("core.dirman")
                     local workspace = dirman.get_current_workspace()
-                    local path = nil
-
-                    if workspace[1] ~= "default" then
-                        path = {workspace[2]}
-                    end
 
                     require("telescope.builtin").find_files({
-                        search_dirs = path,
+                        cwd = tostring(workspace[2]),
                     })
+                end,
+            },
+            {
+                "<Leader>n", function()
+                    local dirman = require("neorg").modules.get_module("core.dirman")
+                    local workspaces = dirman.get_workspace_names()
+                    vim.notify(vim.inspect(dirman))
+
+                    local pickers = require("telescope.pickers")
+                    local finders = require("telescope.finders")
+                    local conf = require("telescope.config").values
+                    local actions = require("telescope.actions")
+                    local action_state = require("telescope.actions.state")
+
+                    local dropdown_opts = {
+                        layout_config = {
+                            height = #workspaces + 4,
+                        },
+                        borderchars = {
+                            prompt = { "─", "│", " ", "│", "┌", "┐", "│", "│" },
+                            results = { "─", "│", "─", "│", "├", "┤", "┘", "└" },
+                            preview = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
+                        },
+                    }
+
+                    local opts = require("telescope.themes").get_dropdown(dropdown_opts)
+
+                    pickers.new(opts, {
+                        prompt_title = "Workspaces",
+                        finder = finders.new_table({results = workspaces}),
+                        sorter = conf.generic_sorter(opts),
+                        attach_mappings = function(prompt_bufnr, map)
+                            actions.select_default:replace(function()
+                                actions.close(prompt_bufnr)
+                                local selection = action_state.get_selected_entry()
+                                vim.cmd("Neorg workspace "..selection[1]) -- maybe call lua instead
+                            end)
+                            return true
+                        end,
+                    }):find()
                 end,
             },
         },
