@@ -17,9 +17,18 @@ return {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim"
         },
+        keys = {
+            {
+                "<Leader>f",
+                function()
+                    vim.lsp.buf.format()
+                end,
+            }
+        },
         config = function()
             require("lspconfig").rust_analyzer.setup({
                 on_attach = function(client)
+                    vim.opt.formatexpr = vim.lsp.formatexpr()
                     require("completion").on_attach(client)
                 end,
                 settings = {
@@ -37,6 +46,9 @@ return {
                         },
                         procMacro = {
                             enable = true
+                        },
+                        rustfmt = {
+                            rangeFormatting = {enable = true},
                         },
                     }
                 }
