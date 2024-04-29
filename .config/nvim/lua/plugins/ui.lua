@@ -80,7 +80,6 @@ return {
                 "<Leader>n", function()
                 local dirman = require("neorg").modules.get_module("core.dirman")
                 local workspaces = dirman.get_workspace_names()
-                vim.notify(vim.inspect(dirman))
 
                 local pickers = require("telescope.pickers")
                 local finders = require("telescope.finders")
