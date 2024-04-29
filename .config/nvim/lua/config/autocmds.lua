@@ -1,4 +1,4 @@
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
     callback = function()
         if vim.bo.filetype == "help" then
             vim.cmd("wincmd L")
