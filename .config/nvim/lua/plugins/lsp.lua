@@ -1,9 +1,11 @@
 return {
-    { "williamboman/mason.nvim",
+    {
+        "williamboman/mason.nvim",
         priority = 20,
         config = true,
     },
-    { "williamboman/mason-lspconfig.nvim",
+    {
+        "williamboman/mason-lspconfig.nvim",
         dependencies = {
             "williamboman/mason.nvim",
             "neovim/nvim-lspconfig"
@@ -11,15 +13,37 @@ return {
         priority = 25,
         config = true,
     },
-    { "neovim/nvim-lspconfig",
+    {
+        "neovim/nvim-lspconfig",
         ft = "rust",
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim"
         },
+        keys = {
+            {
+                "<Leader>f",
+                function()
+                    vim.lsp.buf.format()
+                end,
+            }
+        },
         config = function()
-            require("lspconfig").rust_analyzer.setup({
+            local lspconfig = require("lspconfig")
+
+            lspconfig.lua_ls.setup({
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" }
+                        },
+                    },
+                },
+            })
+
+            lspconfig.rust_analyzer.setup({
                 on_attach = function(client)
+                    vim.opt.formatexpr = vim.lsp.formatexpr()
                     require("completion").on_attach(client)
                 end,
                 settings = {
@@ -38,12 +62,16 @@ return {
                         procMacro = {
                             enable = true
                         },
+                        rustfmt = {
+                            rangeFormatting = { enable = true },
+                        },
                     }
                 }
             })
         end,
     },
-	{ "hrsh7th/nvim-cmp",
+    {
+        "hrsh7th/nvim-cmp",
         priority = 30,
         dependencies = {
             "hrsh7th/cmp-path",
@@ -56,10 +84,7 @@ return {
                 mapping = cmp.mapping.preset.cmdline(),
                 sources = cmp.config.sources({
                     { name = "path" },
-                    {
-                        name = "cmdline",
-                        max_item_count = 10,
-                    },
+                    { name = "cmdline" },
                 })
             })
         end,

@@ -21,5 +21,6 @@ opt.relativenumber = true
 opt.foldenable = false
 opt.foldmethod = "syntax"
 
+opt.pumheight = 10
 opt.wrap = false
 opt.textwidth = 100
