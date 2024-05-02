@@ -10,12 +10,13 @@ local opt = vim.opt
 opt.confirm = true
 opt.background = "light"
 
-opt.tabstop = 4
-opt.softtabstop = -1
-opt.shiftwidth = 4
+-- use spaces for tabs
+-- tabs should be 4 tabs
 opt.expandtab = true
-
+opt.tabstop = 4
+opt.shiftwidth = 4
 opt.autoindent = true
+
 opt.number = true
 opt.relativenumber = true
 opt.foldenable = false
