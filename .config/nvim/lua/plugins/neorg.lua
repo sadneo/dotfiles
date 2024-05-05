@@ -12,9 +12,10 @@ return {
         dependencies = { "vhyrro/luarocks.nvim" },
         keys = {
             {
-                "<Leader>t", function()
-                vim.cmd("Neorg toggle-concealer")
-            end,
+                "<Leader>t",
+                function()
+                    vim.cmd("Neorg toggle-concealer")
+                end,
             },
         },
         opts = {
@@ -28,7 +29,11 @@ return {
                         end,
                     },
                 },
-                ["core.export"] = {},
+                ["core.itero"] = {
+                    config = {
+                        iterables = { "unordered_list%d", "ordered_list%d" },
+                    },
+                },
                 ["core.dirman"] = {
                     config = {
                         workspaces = {
