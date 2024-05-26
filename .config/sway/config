@@ -1,8 +1,11 @@
 ### Output configuration
 output DP-5 {
     mode 1920x1080@164.997Hz
+    position 1920,0
+}
+output HDMI-A-5 {
+    mode 1920x1080@164.997Hz
     position 0,0
-    bg ~/Pictures/wallpapers/LismoreCastle.png fill
 }
 
 ### Input configuration
