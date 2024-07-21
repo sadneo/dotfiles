@@ -18,7 +18,7 @@ button = "left"
 cmd = "pavucontrol"
 [[block.click]]
 button = "right"
-cmd = "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+cmd = "wpctl set-mute @DEFAULT_SINK@ toggle"
 
 [[block]]
 block = "time"
