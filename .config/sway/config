@@ -16,6 +16,7 @@ include $HOME/.config/sway/light.conf
 exec mako
 
 exec swayidle timeout 300 swaylock timeout 450 "loginctl suspend"
+for_window [app_id="foot"] inhibit_idle fullscreen
 
 # Applications
 set $term foot
