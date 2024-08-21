@@ -1,11 +1,11 @@
 ### Output configuration
 output DP-5 {
     mode 1920x1080@164.997Hz
-    position 1920,0
-}
-output HDMI-A-5 {
-    mode 1920x1080@164.997Hz
     position 0,0
+}
+output DP-4 {
+    mode 1920x1080@59.940Hz
+    position 1920,0
 }
 
 ### Input configuration
@@ -21,7 +21,7 @@ font pango: Fira Mono 10
 
 include $HOME/.config/sway/light.conf
 
-exec gentoo-pipewire-launcher &
+exec gentoo-pipewire-launcher restart &
 exec mako
 
 # Applications
