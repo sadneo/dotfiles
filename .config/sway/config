@@ -1,5 +1,5 @@
 ### Output configuration
-output eDP-1 resolution 1920x1080 position 0,0 bg ~/Pictures/wallpapers/LismoreCastle.png fill
+output eDP-1 resolution 1920x1080 position 0,0
 
 bindswitch --locked lid:off "loginctl suspend"
 
