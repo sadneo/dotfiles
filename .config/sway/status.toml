@@ -31,6 +31,9 @@ format = " $icon $ssid "
 block = "sound"
 step_width = 1
 [[block.click]]
+button = "left"
+cmd = "pavucontrol"
+[[block.click]]
 button = "right"
 cmd = "wpctl set-mute @DEFAULT_SINK@ toggle"
 
