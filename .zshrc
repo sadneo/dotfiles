@@ -116,10 +116,18 @@ function check_git_status() {
     echo $git_star
 }
 
+function check_ssh() {
+    if [[ -n "$SSH_TTY" ]]; then
+        echo "yellow"
+    else
+        echo "cyan"
+    fi
+}
+
 function precmd() {
     vcs_info
     print -Pn "\e]133;A\e\\" # Prompt Jumping
 }
 setopt prompt_subst
 
-PROMPT='$(check_git_status)${vcs_info_msg_0_}%F{cyan}[%~]%f%(!.#.$) '
+PROMPT='$(check_git_status)${vcs_info_msg_0_}%F{$(check_ssh)}[%~]%f%(!.#.$) '
