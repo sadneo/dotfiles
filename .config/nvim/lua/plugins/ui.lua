@@ -68,13 +68,18 @@ return {
         keys = {
             {
                 "<Leader>e", function()
-                local dirman = require("neorg").modules.get_module("core.dirman")
-                local workspace = dirman.get_current_workspace()
+                    local dirman = require("neorg").modules.get_module("core.dirman")
+                    local workspace = dirman.get_current_workspace()
 
-                require("telescope.builtin").find_files({
-                    cwd = tostring(workspace[2]),
-                })
-            end,
+                    require("telescope.builtin").find_files({
+                        cwd = tostring(workspace[2]),
+                    })
+                end,
+            },
+            {
+                "<Leader>r", function()
+                    require("telescope.builtin").live_grep()
+                end,
             },
             {
                 "<Leader>n", function()
