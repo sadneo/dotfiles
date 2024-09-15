@@ -33,7 +33,11 @@ return {
     {
         "karb94/neoscroll.nvim",
         event = "VeryLazy",
-        config = true,
+        config = function()
+            if os.getenv("SSH_TTY") == nil then
+                require("neoscroll").setup()
+            end
+        end,
     },
     {
         "andweeb/presence.nvim",
