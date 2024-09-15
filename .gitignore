@@ -23,6 +23,7 @@
 !/.config/mako/config
 !/.config/nvim
 !/.config/nvim/**
+/.config/nvim/lazy-lock.json
 !/.config/sway
 !/.config/sway/**
 !/.config/swaylock
