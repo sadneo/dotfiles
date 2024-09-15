@@ -23,7 +23,6 @@ return {
                 dashboard.button("v", "  To do", ":Neorg workspace personal <CR>"),
                 dashboard.button("c", "  Config", ":Explore $XDG_CONFIG_HOME/nvim <CR>"),
                 dashboard.button("s", "  Restore Session", ":lua require('persistence').load() <CR>"),
-                dashboard.button("d", "  Previous Session", ":lua require('persistence').load({ last = true }) <CR>"),
                 dashboard.button("q", "  Quit", ":qa <CR>"),
             }
 
