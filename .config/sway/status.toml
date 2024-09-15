@@ -4,11 +4,11 @@ icons_format = "{icon}"
 theme = "native"
 
 [icons]
-icons = "awesome6"
+icons = "material-nf"
 
 [[block]]
 block = "net"
-format = " $icon $ssid "
+format = " $icon $device "
 
 [[block]]
 block = "sound"
