@@ -5,17 +5,17 @@ ignore-timeout=1
 anchor=bottom-right
 border-size=2
 
-background-color=#100F0F
-text-color=#F2F0E5
+background-color=#FFFCF0
+text-color=#100F0F
 border-color=#343331
 
 [urgency=low]
-background-color=#100F0F
-text-color=#AD8301
-border-color=#343331
+background-color=#FFFCF0
+text-color=#100F0F
+border-color=#D0A215
 
 [urgency=high]
-background-color=#100F0F
-text-color=#AF3029
-border-color=#343331
+background-color=#FFFCF0
+text-color=#100F0F
+border-color=#AF3029
 
