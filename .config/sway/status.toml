@@ -22,7 +22,7 @@ update = true
 
 [[block]]
 block = "net"
-format = " $icon $device "
+format = " $icon "
 
 [[block]]
 block = "sound"
