@@ -10,3 +10,5 @@ vim.keymap.set({ "n", "v" }, "<Leader>d", "\"+d")
 
 vim.keymap.set("n", "<M-h>", "gT")
 vim.keymap.set("n", "<M-l>", "gt")
+
+vim.keymap.set("n", "<C-c>", ":%y +<CR>")
