@@ -1,15 +1,10 @@
-# Used as base config:
+# Credit to base config
 # https://github.com/MrElendig/dotfiles-alice/blob/master/.zshrc
-
-#------------------------------------------------------------------#
-# File:     .zshrc   ZSH resource file                             #
-# Version:  0.1.16                                                 #
-# Author:   Øyvind "Mr.Elendig" Heggstad <mrelendig@har-ikkje.net> #
-#------------------------------------------------------------------#
 
 #------------------------------
 # Aliases
 #------------------------------
+# TODO: test if eza exists, if not, then create ls aliases instead
 alias tree="eza -T --sort type --git-ignore"
 alias ls="eza --sort type"
 alias ll="eza -lh --sort type"
@@ -20,19 +15,22 @@ alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 #------------------------------
 HISTFILE="$XDG_STATE_HOME/zhistory"
 HISTSIZE=1000
-SAVEHIST=1000
+SAVEHIST=30
 
 #------------------------------
 # Keybindings
 #------------------------------
 bindkey -e
 typeset -g -A key
+
+# alt+k/l instead of up/down arrow for history
 bindkey '^[k' up-line-or-history
 bindkey '^[j' down-line-or-history
 
 # C-w like bash
 zle -N backward-kill-bash-word
-backward-kill-bash-word() WORDCHARS="" zle .backward-kill-word
+# exclude /:@
+backward-kill-bash-word() WORDCHARS="~!#$%^&*(){}[]<>?.+;-_" zle .backward-kill-word
 bindkey "^W" backward-kill-bash-word
 
 #------------------------------
@@ -60,18 +58,12 @@ zstyle ':completion:*:kill:*'   force-list always
 zstyle ':completion:*:*:killall:*' menu yes select
 zstyle ':completion:*:killall:*'   force-list always
 
-#-----------------------------
-# Dircolors
-#-----------------------------
-LS_COLORS='rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:';
-export LS_COLORS
-
 #------------------------------
 # ShellFuncs
 #------------------------------
 # Colored Manuals
-man() {
-  env \
+function man() {
+    env \
     LESS_TERMCAP_mb=$(printf "\e[1;31m") \
     LESS_TERMCAP_md=$(printf "\e[1;31m") \
     LESS_TERMCAP_me=$(printf "\e[0m") \
