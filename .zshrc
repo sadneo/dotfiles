@@ -7,7 +7,7 @@
 # TODO: test if eza exists, if not, then create ls aliases instead
 alias tree="eza -T --sort type --git-ignore"
 alias ls="eza --sort type"
-alias ll="eza -lh --sort type"
+alias ll="eza -lg --sort type"
 alias dot="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 #------------------------------
