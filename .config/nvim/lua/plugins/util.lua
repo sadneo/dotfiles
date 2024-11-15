@@ -33,6 +33,7 @@ return {
     {
         "karb94/neoscroll.nvim",
         event = "VeryLazy",
+        enabled = false,
         config = function()
             if os.getenv("SSH_TTY") == nil then
                 require("neoscroll").setup()
