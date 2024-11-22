@@ -126,4 +126,12 @@ return {
             },
         },
     },
+    {
+        "stevearc/oil.nvim",
+        opts = {
+            confirmation = {
+                border = "none",
+            },
+        },
+    }
 }
