@@ -18,7 +18,7 @@ require("lazy").setup({
     change_detection = {
         enabled = false,
     },
-    install = { colorscheme = { "flexoki-dark", "habamax" } },
+    install = { colorscheme = { "modus", "habamax" } },
     performance = {
         rtp = {
             disabled_plugins = {
@@ -35,6 +35,7 @@ require("lazy").setup({
     },
 })
 
+vim.opt.background = "light"
 vim.cmd.colorscheme("modus")
 require("config.autocmds")
 require("config.keymaps")
