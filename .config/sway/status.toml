@@ -5,6 +5,8 @@ theme = "native"
 
 [icons]
 icons = "material-nf"
+[icons.overrides]
+backlight = ["\uf185"]
 
 [[block]]
 block = "custom"
@@ -19,6 +21,21 @@ update = true
 button = "right"
 cmd = "swaymsg inhibit_idle none"
 update = true
+
+[[block]]
+block = "backlight"
+device = "intel_backlight"
+missing_format = ""
+cycle = [20]
+
+[[block]]
+block = "battery"
+device = "DisplayDevice"
+driver = "upower"
+format = " $icon $percentage "
+charging_format = " $icon $percentage "
+not_charging_format = " $icon $percentage "
+missing_format = ""
 
 [[block]]
 block = "net"
