@@ -43,7 +43,7 @@ format = " $icon "
 
 [[block]]
 block = "sound"
-step_width = 1
+step_width = 2
 [[block.click]]
 button = "left"
 cmd = "pavucontrol"
