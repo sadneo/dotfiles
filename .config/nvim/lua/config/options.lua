@@ -19,7 +19,7 @@ opt.autoindent = true
 opt.number = true
 opt.relativenumber = true
 opt.foldlevel = 99
-opt.foldcolumn = '1'
+opt.foldcolumn = '0'
 opt.foldenable = false
 
 opt.pumheight = 10
