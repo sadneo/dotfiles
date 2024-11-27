@@ -9,6 +9,8 @@ vim.g.netrw_bufsettings = "number relativenumber"
 local opt = vim.opt
 opt.confirm = true
 
+opt.spellcapcheck = ""
+
 -- use spaces for tabs
 -- tabs should be 4 tabs
 opt.expandtab = true
