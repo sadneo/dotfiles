@@ -33,6 +33,20 @@ return {
     {
         "kevinhwang91/nvim-ufo",
         dependencies = { "kevinhwang91/promise-async" },
+        keys = {
+            {
+                "zR",
+                function()
+                    require("ufo").openAllFolds()
+                end,
+            },
+            {
+                "zM",
+                function()
+                    require("ufo").closeAllFolds()
+                end,
+            },
+        },
         opts = {
             open_fold_hl_timeout = 0,
             provider_selector = function(_, _, _)
