@@ -6,6 +6,7 @@ return {
         "miikanissi/modus-themes.nvim",
         opts = {
             variant = "tinted",
+            transparent = true,
             on_highlights = function(highlights, colors)
                 highlights.DiffAdd = {
                     bg = colors.bg_main,
