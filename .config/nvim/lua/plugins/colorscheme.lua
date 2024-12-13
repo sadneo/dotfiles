@@ -1,9 +1,10 @@
 return {
-    { "folke/tokyonight.nvim" },
-    { "rebelot/kanagawa.nvim" },
-    { "rose-pine/neovim" },
+    { "folke/tokyonight.nvim", lazy = true },
+    { "rebelot/kanagawa.nvim", lazy = true },
+    { "rose-pine/neovim", lazy = true },
     {
         "miikanissi/modus-themes.nvim",
+        lazy = true,
         opts = {
             variant = "tinted",
             transparent = true,
