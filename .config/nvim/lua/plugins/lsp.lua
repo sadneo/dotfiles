@@ -1,7 +1,7 @@
 return {
     {
         "williamboman/mason.nvim",
-        priority = 20,
+        lazy = true,
         config = true,
     },
     {
@@ -10,16 +10,16 @@ return {
             "williamboman/mason.nvim",
             "neovim/nvim-lspconfig"
         },
-        priority = 25,
+        lazy = true,
         config = true,
     },
     {
         "neovim/nvim-lspconfig",
-        ft = "rust",
         dependencies = {
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim"
         },
+        ft = { "rust", "lua" },
         keys = {
             {
                 "<Leader>f",
@@ -68,11 +68,11 @@ return {
     },
     {
         "hrsh7th/nvim-cmp",
-        priority = 30,
         dependencies = {
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-cmdline",
         },
+        lazy = true,
         config = function()
             local cmp = require("cmp")
 
