@@ -50,6 +50,8 @@ return {
         opts = {
             open_fold_hl_timeout = 0,
             provider_selector = function(_, _, _)
+                vim.opt.foldmethod = "expr"
+                vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
                 return { "treesitter", "indent" }
             end,
         },
