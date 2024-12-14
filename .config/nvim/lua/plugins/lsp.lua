@@ -72,7 +72,7 @@ return {
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-cmdline",
         },
-        lazy = true,
+        event = "VeryLazy",
         config = function()
             local cmp = require("cmp")
 

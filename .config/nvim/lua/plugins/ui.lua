@@ -128,6 +128,7 @@ return {
     },
     {
         "stevearc/oil.nvim",
+        event = "VeryLazy",
         opts = {
             confirmation = {
                 border = "none",
@@ -136,8 +137,8 @@ return {
     },
     {
         "folke/trouble.nvim",
-        opts = {}, -- for default options, refer to the configuration section for custom setup.
         cmd = "Trouble",
+        opts = {}, -- for default options, refer to the configuration section for custom setup.
         keys = {
             {
                 "<leader>xx",
