@@ -9,6 +9,11 @@ return {
             variant = "tinted",
             transparent = true,
             on_highlights = function(highlights, colors)
+                highlights.TroubleNormal.bg = colors.bg_main
+                highlights.TroubleNormalNC = {
+                    bg = colors.bg_main,
+                    fg = colors.fg_main,
+                }
                 highlights.DiffAdd = {
                     bg = colors.bg_main,
                     fg = colors.fg_added,
