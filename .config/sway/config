@@ -19,8 +19,6 @@ exec gentoo-pipewire-launcher restart &
 exec mako
 exec sunshine
 
-exec swayidle timeout 300 swaylock timeout 450 "loginctl suspend"
-
 # Applications
 set $term foot
 
