@@ -9,20 +9,6 @@ icons = "material-nf"
 backlight = ["\uf185"]
 
 [[block]]
-block = "custom"
-format = " $text "
-command = "swaymsg -t get_tree | jq '.. | select(.type?) | select(.focused).inhibit_idle'"
-interval = 1
-[[block.click]]
-button = "left"
-cmd = "swaymsg inhibit_idle focus"
-update = true
-[[block.click]]
-button = "right"
-cmd = "swaymsg inhibit_idle none"
-update = true
-
-[[block]]
 block = "backlight"
 device = "intel_backlight"
 missing_format = ""
