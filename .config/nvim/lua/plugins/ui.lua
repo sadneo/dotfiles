@@ -67,18 +67,18 @@ return {
         keys = {
             {
                 "<Leader>e", function()
-                    local dirman = require("neorg").modules.get_module("core.dirman")
-                    local workspace = dirman.get_current_workspace()
+                local dirman = require("neorg").modules.get_module("core.dirman")
+                local workspace = dirman.get_current_workspace()
 
-                    require("telescope.builtin").find_files({
-                        cwd = tostring(workspace[2]),
-                    })
-                end,
+                require("telescope.builtin").find_files({
+                    cwd = tostring(workspace[2]),
+                })
+            end,
             },
             {
                 "<Leader>r", function()
-                    require("telescope.builtin").live_grep()
-                end,
+                require("telescope.builtin").live_grep()
+            end,
             },
             {
                 "<Leader>n", function()
@@ -112,7 +112,7 @@ return {
                         actions.select_default:replace(function()
                             actions.close(prompt_bufnr)
                             local selection = action_state.get_selected_entry()
-                            vim.cmd("Neorg workspace " .. selection[1])   -- maybe call lua instead
+                            vim.cmd("Neorg workspace " .. selection[1]) -- maybe call lua instead
                         end)
                         return true
                     end,
@@ -151,4 +151,19 @@ return {
             },
         },
     },
+    {
+        "folke/todo-comments.nvim",
+        cmd = { "TodoTrouble", "TodoTelescope" },
+        -- event = "LazyFile",
+        opts = {},
+        keys = {
+            { "]t",         function() require("todo-comments").jump_next() end,              desc = "Next Todo Comment" },
+            { "[t",         function() require("todo-comments").jump_prev() end,              desc = "Previous Todo Comment" },
+            { "<leader>xt", "<cmd>Trouble todo toggle<cr>",                                   desc = "Todo (Trouble)" },
+            { "<leader>xT", "<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
+            { "<leader>st", "<cmd>TodoTelescope<cr>",                                         desc = "Todo" },
+            { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>",                 desc = "Todo/Fix/Fixme" },
+        },
+    }
+
 }
