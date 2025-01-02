@@ -136,7 +136,7 @@ bindsym $mod+Control+Shift+6 rename workspace to 6
 bindsym $mod+Control+Shift+7 rename workspace to 7
 bindsym $mod+Control+Shift+8 rename workspace to 8
 bindsym $mod+Control+Shift+9 rename workspace to 9
-bindsym $mod+Control+Shift+0 rename workspace to 0
+bindsym $mod+Control+Shift+0 rename workspace to 10
 
 # Layout:
 bindsym $mod+b splith
