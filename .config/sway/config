@@ -1,6 +1,6 @@
 ### Output configuration
 include "$(cat /etc/hostname).conf"
-bindswitch --locked lid:off "loginctl suspend"
+bindswitch --locked lid:off "systemctl suspend"
 
 ### Input configuration
 input "type:keyboard" {
@@ -15,7 +15,6 @@ font pango: Fira Mono 10
 
 include $HOME/.config/sway/light.conf
 
-exec gentoo-pipewire-launcher restart &
 exec bt-agent -c DisplayYesNo
 exec mako
 exec sunshine
@@ -39,7 +38,7 @@ bindsym $mod+d exec bemenu-run
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy -t image/png
 bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 bindsym $mod+Shift+x exec "swaylock"
-bindsym $mod+Shift+r exec "loginctl suspend"
+bindsym $mod+Shift+r exec "systemctl suspend"
 bindsym $mod+i bar mode toggle
 
 # Media keys
