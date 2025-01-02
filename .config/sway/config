@@ -46,15 +46,13 @@ bindsym XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%+"
 bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%-"
 bindsym XF86AudioMute exec "wpctl set-mute @DEFAULT_SINK@ toggle"
 bindsym XF86AudioMicMute exec "wpctl set-mute @DEFAULT_SOURCE@ toggle"
-bindsym XF86MonBrightnessUp exec "doas xbacklight +5"
-bindsym XF86MonBrightnessDown exec "doas xbacklight -5"
+bindsym XF86MonBrightnessUp exec "sudo xbacklight +5"
+bindsym XF86MonBrightnessDown exec "sudo xbacklight -5"
 bindsym XF86AudioPlay exec "playerctl play"
 bindsym XF86AudioPause exec "playerctl pause"
 
 # Keyboard keys
 bindsym XF86Tools exec "playerctl play-pause"
-bindsym XF86Launch5 exec "bluetoothctl connect 30:53:C1:32:5F:3B"
-bindsym XF86Launch6 exec "bluetoothctl disconnect 30:53:C1:32:5F:3B"
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
