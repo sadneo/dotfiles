@@ -21,9 +21,9 @@ return {
                 dashboard.button("i", "  New file", ":ene <BAR> startinsert <CR>"),
                 dashboard.button("n", "  Notes", ":Neorg workspace notes <CR>"),
                 dashboard.button("v", "  To do", ":Neorg workspace personal <CR>"),
-                dashboard.button("c", "  Config", ":e $XDG_CONFIG_HOME/nvim <CR>"),
-                dashboard.button("s", "  Restore Session", ":lua require('persistence').load() <CR>"),
-                dashboard.button("q", "  Quit", ":qa <CR>"),
+                dashboard.button("c", "  Config", ":e $HOME/.config/nvim <CR>"),
+                dashboard.button("s", "  Restore Session", ":lua require('persistence').load() <CR>"),
+                dashboard.button("q", "  Quit", ":qa <CR>"),
             }
 
             dashboard.section.footer.val =
