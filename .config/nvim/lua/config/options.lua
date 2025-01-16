@@ -8,6 +8,7 @@ vim.g.netrw_bufsettings = "number relativenumber"
 
 local opt = vim.opt
 opt.confirm = true
+opt.termguicolors = true
 
 opt.spellcapcheck = ""
 
