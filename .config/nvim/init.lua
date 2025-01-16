@@ -11,14 +11,12 @@ require("lazy").setup({
     spec = {
         { import = "plugins" },
     },
-    defaults = {
-        lazy = false,
-        version = false,
-    },
     change_detection = {
         enabled = false,
     },
-    install = { colorscheme = { "modus", "habamax" } },
+    install = {
+        colorscheme = { "tokyonight-night", "habamax" },
+    },
     performance = {
         rtp = {
             disabled_plugins = {
@@ -35,7 +33,7 @@ require("lazy").setup({
     },
 })
 
-vim.opt.background = "light"
-vim.cmd.colorscheme("modus")
+vim.opt.background = "dark"
+vim.cmd.colorscheme("tokyonight-night")
 require("config.autocmds")
 require("config.keymaps")

@@ -13,7 +13,7 @@ default_floating_border pixel 2
 hide_edge_borders smart
 font pango: Fira Mono 10
 
-include $HOME/.config/sway/light.conf
+include $HOME/.config/sway/dark.conf
 
 exec bt-agent -c DisplayYesNo
 exec mako
