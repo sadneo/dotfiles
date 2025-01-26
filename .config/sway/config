@@ -15,7 +15,6 @@ font pango: Fira Mono 10
 
 include $HOME/.config/sway/dark.conf
 
-exec bt-agent -c DisplayYesNo
 exec mako
 exec sunshine
 
