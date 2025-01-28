@@ -8,9 +8,6 @@ vim.keymap.set({ "n", "v" }, "<Leader>y", "\"+y")
 vim.keymap.set({ "n", "v" }, "<Leader>p", "\"+p")
 vim.keymap.set({ "n", "v" }, "<Leader>d", "\"+d")
 
-vim.keymap.set("n", "<M-h>", "gT")
-vim.keymap.set("n", "<M-l>", "gt")
-
 vim.keymap.set("n", "<C-c>", ":%y +<CR>")
 vim.keymap.set("n", "<C-S-l>", function()
     vim.diagnostic.enable(not vim.diagnostic.is_enabled())

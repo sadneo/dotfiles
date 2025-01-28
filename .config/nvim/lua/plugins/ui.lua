@@ -167,6 +167,13 @@ return {
     },
     {
         "akinsho/bufferline.nvim",
+        event = "BufAdd",
+        keys = {
+            {"<M-l>", "<cmd>BufferLineCycleNext<cr>"},
+            {"<M-h>", "<cmd>BufferLineCyclePrev<cr>"},
+            {"<M-S-l>", "<cmd>BufferLineMoveNext<cr>"},
+            {"<M-S-h>", "<cmd>BufferLineMovePrev<cr>"},
+        },
         config = true,
     },
 }
