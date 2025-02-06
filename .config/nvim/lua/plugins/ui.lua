@@ -168,12 +168,16 @@ return {
     {
         "akinsho/bufferline.nvim",
         event = "BufAdd",
+        opts = {
+            options = {
+                modified_icon = "•"
+            },
+        },
         keys = {
             {"<M-l>", "<cmd>BufferLineCycleNext<cr>"},
             {"<M-h>", "<cmd>BufferLineCyclePrev<cr>"},
             {"<M-S-l>", "<cmd>BufferLineMoveNext<cr>"},
             {"<M-S-h>", "<cmd>BufferLineMovePrev<cr>"},
         },
-        config = true,
     },
 }
