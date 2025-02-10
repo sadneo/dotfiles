@@ -10,10 +10,10 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export BEMENU_OPTS="-i -fn 'Iosevka SS05 10' --fb '#100F0F' --ff '#FFFCF0' --nb '#100F0F' --nf '#FFFCF0' --tb '#100F0F' --tf '#FFFCF0' --hb '#100F0F' --hf '#FFFCF0' --ab '#100F0F' --af '#FFFCF0'"
 # export BEMENU_OPTS="-i -fn 'Iosevka SS05 10' --fb '#FFFCF0' --ff '#100F0F' --nb '#FFFCF0' --nf '#100F0F' --tb '#FFFCF0' --tf '#100F0F' --hb '#CECDC3' --hf '#100F0F' --ab '#FFFCF0' --af '#100F0F'"
 
-# export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
-# export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
-# export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 
 # Home folder shenanigans
 alias wget="wget --hsts-file="${XDG_CACHE_HOME}/wget-hsts""
