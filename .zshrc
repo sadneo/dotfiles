@@ -33,6 +33,16 @@ zle -N backward-kill-bash-word
 backward-kill-bash-word() WORDCHARS="~!#$%^&*(){}[]<>?.+;-_" zle .backward-kill-word
 bindkey "^W" backward-kill-bash-word
 
+# chatgpt moment
+toggle_vim() {
+    if jobs % > /dev/null 2>&1; then
+        fg
+    fi
+}
+
+zle -N toggle_vim
+bindkey '^Z' toggle_vim
+
 #------------------------------
 # Comp stuff
 #------------------------------
