@@ -174,6 +174,7 @@ return {
             },
         },
         keys = {
+            {"<M-c>", "<cmd>bd<cr>"},
             {"<M-l>", "<cmd>BufferLineCycleNext<cr>"},
             {"<M-h>", "<cmd>BufferLineCyclePrev<cr>"},
             {"<M-S-l>", "<cmd>BufferLineMoveNext<cr>"},
