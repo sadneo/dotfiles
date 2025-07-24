@@ -1,6 +1,6 @@
 return {
     {
-        "aidan/neo-live",
+        "sadneo/neovim-live",
         dir = "~/Projects/neovim-live",
         opts = {},
     },
