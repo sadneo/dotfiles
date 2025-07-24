@@ -154,15 +154,9 @@ return {
     {
         "folke/todo-comments.nvim",
         cmd = { "TodoTrouble", "TodoTelescope" },
-        -- event = "LazyFile",
         opts = {},
         keys = {
-            { "]t",         function() require("todo-comments").jump_next() end,              desc = "Next Todo Comment" },
-            { "[t",         function() require("todo-comments").jump_prev() end,              desc = "Previous Todo Comment" },
-            { "<leader>xt", "<cmd>Trouble todo toggle<cr>",                                   desc = "Todo (Trouble)" },
-            { "<leader>xT", "<cmd>Trouble todo toggle filter = {tag = {TODO,FIX,FIXME}}<cr>", desc = "Todo/Fix/Fixme (Trouble)" },
-            { "<leader>st", "<cmd>TodoTelescope<cr>",                                         desc = "Todo" },
-            { "<leader>sT", "<cmd>TodoTelescope keywords=TODO,FIX,FIXME<cr>",                 desc = "Todo/Fix/Fixme" },
+            { "<leader>z", "<cmd>Trouble todo toggle<cr>", desc = "Todo (Trouble)" },
         },
     },
     {
@@ -174,11 +168,11 @@ return {
             },
         },
         keys = {
-            {"<M-c>", "<cmd>bd<cr>"},
-            {"<M-l>", "<cmd>BufferLineCycleNext<cr>"},
-            {"<M-h>", "<cmd>BufferLineCyclePrev<cr>"},
-            {"<M-S-l>", "<cmd>BufferLineMoveNext<cr>"},
-            {"<M-S-h>", "<cmd>BufferLineMovePrev<cr>"},
+            { "<M-c>",   "<cmd>bd<cr>" },
+            { "<M-l>",   "<cmd>BufferLineCycleNext<cr>" },
+            { "<M-h>",   "<cmd>BufferLineCyclePrev<cr>" },
+            { "<M-S-l>", "<cmd>BufferLineMoveNext<cr>" },
+            { "<M-S-h>", "<cmd>BufferLineMovePrev<cr>" },
         },
     },
 }

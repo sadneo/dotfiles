@@ -5,7 +5,7 @@ return {
         event = { "BufReadPost", "BufNewFile" },
         config = function()
             require("nvim-treesitter.configs").setup({
-                ensure_installed = { "lua", "rust", "toml", "java", "yaml" },
+                ensure_installed = { "lua", "rust", "toml" },
                 highlight = { enable = true },
                 indent = { enable = true },
             })

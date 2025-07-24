@@ -11,8 +11,15 @@ return {
         event = "VeryLazy",
         main = "ibl",
         opts = {
-            exclude = { filetypes = { "norg" } },
-            scope = { enabled = false },
+            viewport_buffer = {
+                min = 50,
+            },
+            scope = {
+                enabled = false,
+            },
+            exclude = {
+                filetypes = { "norg" },
+            },
         },
     },
     {
@@ -22,13 +29,13 @@ return {
     },
     {
         "folke/persistence.nvim",
-        event = "BufReadPre",
+        event = "VeryLazy",
         opts = { options = vim.opt.sessionoptions:get() },
     },
     {
-        "numToStr/Comment.nvim",
+        "echasnovski/mini.comment",
         event = "VeryLazy",
-        config = true,
+        opts = {},
     },
     {
         "kevinhwang91/nvim-ufo",

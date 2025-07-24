@@ -1,7 +1,7 @@
 return {
     {
         "williamboman/mason.nvim",
-        lazy = true,
+        cmd = { "Mason" },
         config = true,
     },
     {
@@ -10,8 +10,15 @@ return {
             "williamboman/mason.nvim",
             "neovim/nvim-lspconfig"
         },
-        lazy = true,
-        config = true,
+        event = "BufReadPre",
+        opts = {
+            automatic_setup = false,
+        },
+    },
+    {
+        "folke/lazydev.nvim",
+        ft = "lua",
+        opts = {},
     },
     {
         "neovim/nvim-lspconfig",
@@ -35,7 +42,11 @@ return {
                 settings = {
                     Lua = {
                         diagnostics = {
-                            globals = { "vim" }
+                            globals = { "vim" },
+                        },
+                        workspace = {
+                            library = vim.api.nvim_get_runtime_file("", true),
+                            checkThirdParty = false,
                         },
                     },
                 },
@@ -50,11 +61,17 @@ return {
                                 enable = true,
                             },
                         },
-                        checkOnSave = {
-                            features = "all",
-                            command = "clippy",
-                            extraArgs = { "--no-deps" },
+                        inlayHints = {
+                            typeHints = true,
+                            parameterHints = true,
+                            chainingHints = true,
                         },
+                        checkOnSave = true,
+                        -- checkOnSave = {
+                        --     features = "all",
+                        --     command = "clippy",
+                        --     extraArgs = { "--no-deps" },
+                        -- },
                         procMacro = {
                             enable = true
                         },
@@ -72,7 +89,7 @@ return {
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-cmdline",
         },
-        event = "VeryLazy",
+        event = "CmdlineEnter",
         config = function()
             local cmp = require("cmp")
 
