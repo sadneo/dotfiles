@@ -11,6 +11,8 @@
 !/.local/bin/*
 
 !/.config
+!/.config/fish
+!/.config/fish/**
 !/.config/foot
 !/.config/foot/foot.ini
 !/.config/git
