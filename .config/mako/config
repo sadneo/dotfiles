@@ -1,21 +1,21 @@
-font=Fira Mono 11
+font=JetBrains Mono 11
 history=0
 default-timeout=8000
 ignore-timeout=1
 anchor=bottom-right
-border-size=2
+border-size=1
 
-background-color=#FFFCF0
-text-color=#100F0F
-border-color=#343331
+text-color=#FFFCF0
+background-color=#100F0F
+border-color=#83BCFF
 
 [urgency=low]
-background-color=#FFFCF0
-text-color=#100F0F
-border-color=#D0A215
+text-color=#FFFCF0
+background-color=#100F0F
+border-color=#83BCFF
 
 [urgency=high]
-background-color=#FFFCF0
-text-color=#100F0F
+text-color=#FFFCF0
+background-color=#100F0F
 border-color=#AF3029
 
