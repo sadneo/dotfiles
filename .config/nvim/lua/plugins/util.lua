@@ -38,6 +38,11 @@ return {
         opts = {},
     },
     {
+        'echasnovski/mini.align',
+        event = "VeryLazy",
+        opts = {},
+    },
+    {
         "kevinhwang91/nvim-ufo",
         event = "VeryLazy",
         dependencies = { "kevinhwang91/promise-async" },
