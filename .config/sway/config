@@ -6,7 +6,7 @@ output * bg $wallpaper fill
 
 ### Input configuration
 input "type:keyboard" {
-    xkb_options caps:escape_shifted_capslock
+    xkb_options caps:escape_shifted_capslock,lv3:ralt_switch
 }
 input "type:pointer" {
     accel_profile "flat"
@@ -25,7 +25,7 @@ default_border pixel 1
 default_floating_border pixel 1
 floating_modifier $mod normal
 hide_edge_borders smart
-font pango: Fira Mono 10
+font pango: JetBrains Mono 10
 
 # Custom keybinds
 bindsym $mod+d exec bemenu-run
@@ -40,8 +40,8 @@ bindsym $mod+i bar mode toggle
 # Multimedia keys
 bindsym XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%+"
 bindsym XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%-"
-bindsym $mod+XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%+"
-bindsym $mod+XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%-"
+bindsym Mod5+XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%+"
+bindsym Mod5+XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%-"
 bindsym XF86AudioMute exec "wpctl set-mute @DEFAULT_SINK@ toggle"
 bindsym XF86AudioMicMute exec "wpctl set-mute @DEFAULT_SOURCE@ toggle"
 bindsym XF86MonBrightnessUp exec "sudo xbacklight +5"
