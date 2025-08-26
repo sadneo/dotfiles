@@ -17,6 +17,7 @@
 !/.config/foot/foot.ini
 !/.config/git
 !/.config/git/config
+!/.config/git/credential-helper.sh
 !/.config/kitty
 !/.config/kitty/kitty.conf
 !/.config/kitty/current-theme.conf
