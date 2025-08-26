@@ -2,6 +2,7 @@ export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.local/share/cargo/bin"
 export EDITOR="nvim"
 export BROWSER="firefox"
 
+export ICON_THEME=Papirus
 export QT_QPA_PLATFORM="wayland;xcb"
 export ANKI_WAYLAND=1
 export KITTY_ENABLE_WAYLAND=1
