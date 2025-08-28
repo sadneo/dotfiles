@@ -79,8 +79,4 @@ return {
             end
         end,
     },
-    {
-        "andweeb/presence.nvim",
-        event = "VeryLazy",
-    }
 }
