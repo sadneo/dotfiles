@@ -27,7 +27,7 @@ return {
             }
 
             dashboard.section.footer.val =
-            "Virtue is what you do when nobody is looking. The rest is marketing. - Nassim Nicholas Taleb"
+            "Perseverance!"
 
             require("alpha").setup(dashboard.config)
         end,
