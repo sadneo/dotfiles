@@ -1,6 +1,7 @@
 export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.local/share/cargo/bin"
 export EDITOR="nvim"
 export BROWSER="firefox"
+export SHELL=$(which fish)
 
 export ICON_THEME=Papirus
 export QT_QPA_PLATFORM="wayland;xcb"
