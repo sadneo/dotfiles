@@ -1,6 +1,7 @@
 function fish_prompt
     set -l git_branch ''
     set -l git_star ''
+    set -l pwd_color 'cyan'
 
     if git rev-parse --is-inside-work-tree &>/dev/null
         set git_branch (git symbolic-ref --short HEAD 2>/dev/null)
@@ -12,5 +13,15 @@ function fish_prompt
         end
     end
 
-    echo -ns "$git_star$git_branch" (set_color cyan) "[$(prompt_pwd)]" (set_color normal) ' '
+    if test -n "$IN_NIX_SHELL"
+        set pwd_color 'green'
+    end
+
+    echo -ns "$git_star$git_branch" (set_color $pwd_color) "[$(prompt_pwd)]" (set_color normal) ' '
+end
+
+function fish_right_prompt
+    if test -n "$SSH_TTY"
+        echo -ns (set_color yellow) "["(hostname)"]" (set_color normal)
+    end
 end
