@@ -39,5 +39,5 @@ cmd = "wpctl set-mute @DEFAULT_SINK@ toggle"
 
 [[block]]
 block = "time"
-format = " $icon $timestamp.datetime(f:'%a %m/%d %H:%M:%S') "
+format = " $icon $timestamp.datetime(f:'%a %m/%d %l:%M:%S') "
 interval = 1
