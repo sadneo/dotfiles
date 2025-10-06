@@ -1,5 +1,5 @@
 ## dotfiles
-Dotfiles for my Gentoo Linux system
+Dotfiles for my system
 
 ### Overview
 * WM: sway
@@ -7,9 +7,8 @@ Dotfiles for my Gentoo Linux system
 * Bar: swaybar using i3blocks-rs
 * Text editor: neovim
 * Terminal: foot
-* Shell: zsh
+* Shell: fish
 * Notifications: mako
-* Terminal Theme: modus-operandi
 
 ### Installation
 ```sh

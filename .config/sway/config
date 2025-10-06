@@ -48,6 +48,7 @@ bindsym XF86MonBrightnessUp exec "sudo xbacklight +5"
 bindsym XF86MonBrightnessDown exec "sudo xbacklight -5"
 bindsym XF86AudioPlay exec "playerctl play"
 bindsym XF86AudioPause exec "playerctl pause"
+bindsym XF86Tools exec "playerctl play-pause"
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
