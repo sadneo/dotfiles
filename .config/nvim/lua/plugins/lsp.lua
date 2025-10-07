@@ -36,9 +36,9 @@ return {
             }
         },
         config = function()
-            local lspconfig = require("lspconfig")
+            local lspconfig = vim.lsp.config
 
-            lspconfig.lua_ls.setup({
+            lspconfig.lua_ls = {
                 settings = {
                     Lua = {
                         diagnostics = {
@@ -50,9 +50,9 @@ return {
                         },
                     },
                 },
-            })
+            }
 
-            lspconfig.rust_analyzer.setup({
+            lspconfig.rust_analyzer = {
                 settings = {
                     ["rust-analyzer"] = {
                         cargo = {
@@ -80,7 +80,7 @@ return {
                         },
                     }
                 }
-            })
+            }
         end,
     },
     {
