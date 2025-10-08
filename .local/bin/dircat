@@ -1,0 +1,72 @@
+#!/bin/sh
+
+dump_file() {
+    filepath="$1"
+    out="$2"
+
+    echo "#####################################" >> "$out"
+    echo "chatgpt: $filepath" >> "$out"
+    echo >> "$out"
+
+    if [ -f "$filepath" ]; then
+        # Using 'cat' and redirecting errors to continue
+        if ! cat "$filepath" >> "$out" 2>/dev/null; then
+            echo "[Error reading file: $filepath]" >> "$out"
+        fi
+    else
+        echo "[Skipping: $filepath is not a regular file]" >> "$out"
+    fi
+}
+
+process_path() {
+    path="$1"
+    out="$2"
+
+    if [ -f "$path" ]; then
+        dump_file "$path" "$out"
+    elif [ -d "$path" ]; then
+        # Recursively process directory
+        find "$path" -type f | while IFS= read -r file; do
+            dump_file "$file" "$out"
+        done
+    else
+        echo "[Skipping: $path is not a file or directory]" >> "$out"
+    fi
+}
+
+main() {
+    output_file="$1"
+    shift
+    input_paths="$@"
+
+    # If no output file is given, use stdout
+    if [ -z "$output_file" ]; then
+        out="/dev/stdout"
+    else
+        out="$output_file"
+        # Empty the output file first
+        : > "$out"
+    fi
+
+    for path in $input_paths; do
+        process_path "$path" "$out"
+    done
+}
+
+# Check arguments
+if [ $# -lt 1 ]; then
+    echo "Usage: $0 <file_or_directory> [more ...] [output_file]"
+    exit 1
+fi
+
+# Optional last argument is output file if prefixed with '>'
+if [ "$1" = ">" ]; then
+    shift
+    output_file="$1"
+    shift
+else
+    output_file=""
+fi
+
+main "$output_file" "$@"
+
