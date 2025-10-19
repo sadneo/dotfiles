@@ -1,3 +1,4 @@
+-- keymaps
 vim.keymap.set("n", "i", function()
     return string.match(vim.api.nvim_get_current_line(), "%g") == nil
         and "cc" or "i"
@@ -16,3 +17,9 @@ end)
 vim.keymap.set("n", "gd", function()
     vim.lsp.buf.definition()
 end)
+
+-- user commands
+vim.api.nvim_create_user_command("MasonMappings", function()
+    local mappings = require("mason-lspconfig").get_installed_servers()
+    print(vim.inspect(mappings))
+end, {})
