@@ -27,7 +27,7 @@ default_border pixel 1
 default_floating_border pixel 1
 floating_modifier $mod normal
 hide_edge_borders smart
-font pango: JetBrains Mono 10
+font pango: Aporetic Serif Mono 10
 
 # Custom keybinds
 bindsym $mod+d exec bemenu-run
@@ -38,6 +38,10 @@ bindsym $mod+Shift+x exec "swaylock"
 bindsym $mod+Shift+r exec "systemctl suspend"
 bindsym $mod+Shift+t exec "systemctl hibernate"
 bindsym $mod+i bar mode toggle
+bindsym $mod+Escape mode "disable"
+mode "disable" {
+    bindsym $mod+Escape mode "default"
+}
 
 # Multimedia keys
 bindsym XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%+"
@@ -46,8 +50,8 @@ bindsym Mod5+XF86AudioRaiseVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%+"
 bindsym Mod5+XF86AudioLowerVolume exec "wpctl set-volume @DEFAULT_SINK@ 2%-"
 bindsym XF86AudioMute exec "wpctl set-mute @DEFAULT_SINK@ toggle"
 bindsym XF86AudioMicMute exec "wpctl set-mute @DEFAULT_SOURCE@ toggle"
-bindsym XF86MonBrightnessUp exec "sudo xbacklight +5"
-bindsym XF86MonBrightnessDown exec "sudo xbacklight -5"
+bindsym XF86MonBrightnessUp exec "brightnessctl set 5%+"
+bindsym XF86MonBrightnessDown exec "brightnessctl set 5%-"
 bindsym XF86AudioPlay exec "playerctl play"
 bindsym XF86AudioPause exec "playerctl pause"
 bindsym XF86Tools exec "playerctl play-pause"
