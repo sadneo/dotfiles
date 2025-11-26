@@ -1,31 +1,11 @@
 return {
     {
-        "williamboman/mason.nvim",
-        cmd = { "Mason" },
-        config = true,
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        dependencies = {
-            "williamboman/mason.nvim",
-            "neovim/nvim-lspconfig"
-        },
-        event = "BufReadPre",
-        opts = {
-            automatic_setup = false,
-        },
-    },
-    {
         "folke/lazydev.nvim",
         ft = "lua",
         opts = {},
     },
     {
         "neovim/nvim-lspconfig",
-        dependencies = {
-            "williamboman/mason.nvim",
-            "williamboman/mason-lspconfig.nvim"
-        },
         ft = { "rust", "lua" },
         keys = {
             {
@@ -38,6 +18,7 @@ return {
         config = function()
             local lspconfig = vim.lsp.config
 
+            vim.lsp.enable("ruff")
             lspconfig.lua_ls = {
                 settings = {
                     Lua = {
@@ -51,6 +32,7 @@ return {
                     },
                 },
             }
+            vim.lsp.enable("lua_ls")
 
             lspconfig.rust_analyzer = {
                 settings = {
@@ -81,6 +63,7 @@ return {
                     }
                 }
             }
+            vim.lsp.enable("rust_analyzer")
         end,
     },
     {
@@ -105,16 +88,15 @@ return {
     {
         "nvimtools/none-ls.nvim",
         dependencies = {
-            "williamboman/mason.nvim",
             "nvim-lua/plenary.nvim",
         },
         config = function()
             local null_ls = require("null-ls")
 
             null_ls.setup({
+                debug = true,
                 sources = {
-                    null_ls.builtins.formatting.prettier,
-                    null_ls.builtins.formatting.ruff,
+                    null_ls.builtins.formatting.nixfmt,
                 },
             })
         end,
