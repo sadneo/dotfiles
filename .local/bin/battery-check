@@ -4,6 +4,6 @@ PERCENT=$(upower -i /org/freedesktop/UPower/devices/DisplayDevice \
 STATE=$(upower -i /org/freedesktop/UPower/devices/DisplayDevice \
     | awk -F: '/state/ {gsub(/^[ \t]+/, "", $2); print $2}')
 
-if [ $PERCENT -lt 15 ] && [ $STATE != "charging" ]; then
+if [ $PERCENT -lt 20 ] && [ $STATE != "charging" ]; then
     notify-send -u critical "Battery Low" "Battery at ${PERCENT}%. Plug in your charger!"
 fi
