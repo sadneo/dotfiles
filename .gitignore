@@ -20,6 +20,8 @@
 !/.config/foot/foot.ini
 !/.config/foot/themes
 !/.config/foot/themes/*
+!/.config/fuzzel
+!/.config/fuzzel/fuzzel.ini
 !/.config/git
 !/.config/git/config
 !/.config/git/credential-helper.sh

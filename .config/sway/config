@@ -30,7 +30,7 @@ hide_edge_borders smart
 font pango: Aporetic Serif Mono 10
 
 # Custom keybinds
-bindsym $mod+d exec bemenu-run
+bindsym $mod+d exec fuzzel
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy -t image/png
 bindsym Print exec grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') - | wl-copy
 bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
