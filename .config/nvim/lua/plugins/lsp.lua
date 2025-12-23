@@ -6,7 +6,7 @@ return {
     },
     {
         "neovim/nvim-lspconfig",
-        ft = { "rust", "lua" },
+        ft = { "rust", "lua", "python" },
         keys = {
             {
                 "<Leader>f",
