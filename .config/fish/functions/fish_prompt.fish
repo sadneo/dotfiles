@@ -22,6 +22,6 @@ end
 
 function fish_right_prompt
     if test -n "$SSH_TTY"
-        echo -ns (set_color yellow) "["(cat /proc/sys/kernel/hostname)"]" (set_color normal)
+        echo -ns (set_color yellow) "[$hostname]" (set_color normal)
     end
 end
