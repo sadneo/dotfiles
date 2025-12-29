@@ -5,7 +5,7 @@ dump_file() {
     out="$2"
 
     echo "#####################################" >> "$out"
-    echo "chatgpt: $filepath" >> "$out"
+    echo "filename: $filepath" >> "$out"
     echo >> "$out"
 
     if [ -f "$filepath" ]; then
