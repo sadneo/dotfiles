@@ -3,11 +3,10 @@
 # Based on the Flexoki color scheme by kepano
 # https://github.com/kepano/flexoki
 
-[cursor]
-# Flexoki Black (Text) on Flexoki Base 100 (Cursor Block)
-color=100f0f e6e4d9 
-
 [colors]
+# Flexoki Black (Text) on Flexoki Base 100 (Cursor Block)
+cursor=100f0f e6e4d9 
+
 foreground=cecdc3 # Flexoki Base 200 (Standard Text)
 background=100f0f # Flexoki Black (Background)
 
