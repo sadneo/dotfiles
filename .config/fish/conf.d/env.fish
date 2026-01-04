@@ -11,6 +11,7 @@ set -x MOZ_ENABLE_WAYLAND 1
 set -x _JAVA_AWT_WM_NONREPARENTING 1
 
 # Home folder / language tooling
+set -x QHOME $HOME/Projects/q
 set -x GOPATH $HOME/.go
 set -x ANDROID_HOME $XDG_DATA_HOME/android
 set -x PARALLEL_HOME $XDG_CONFIG_HOME/parallel
