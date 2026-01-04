@@ -1,4 +1,4 @@
-local dir = vim.fn.expand("~/Projects/neovim-live")
+local dir = vim.fn.expand("~/Projects/neo-live")
 local stat = vim.loop.fs_stat(dir)
 
 if not stat or not stat.type == "directory" then
@@ -7,7 +7,7 @@ end
 
 return {
     {
-        "sadneo/neovim-live",
+        "sadneo/neo-live",
         dir = dir,
         opts = {},
     },
