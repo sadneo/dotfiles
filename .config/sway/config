@@ -12,6 +12,9 @@ input "type:pointer" {
     accel_profile "flat"
     pointer_accel -0.2
 }
+input "type:touchpad" {
+    dwt enabled
+}
 
 ### Vital Programs
 exec mako
