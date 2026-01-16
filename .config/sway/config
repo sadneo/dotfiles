@@ -2,7 +2,6 @@ include dark.conf
 
 ### Output configuration
 include "$(cat /etc/hostname).conf"
-output * bg $wallpaper fill
 
 ### Input configuration
 input "type:keyboard" {
@@ -22,6 +21,7 @@ exec fcitx5 -d
 exec bt-agent -c NoInputNoOutput
 exec sunshine
 exec nm-applet
+exec_always kanshi
 
 ### Custom Keybinds
 set $mod Mod4
