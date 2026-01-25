@@ -22,6 +22,7 @@ exec bt-agent -c NoInputNoOutput
 exec sunshine
 exec nm-applet
 exec_always kanshi
+exec_always pkill wayvnc; wayvnc $(tailscale ip -4)
 
 ### Custom Keybinds
 set $mod Mod4
@@ -179,6 +180,11 @@ mode "resize" {
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
+}
+
+bindsym $mod+Shift+Escape mode "passthrough"
+mode "passthrough" {
+    bindsym $mod+Shift+Escape mode "default"
 }
 
 include /etc/sway/config.d/*
