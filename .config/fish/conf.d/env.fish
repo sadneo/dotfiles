@@ -2,7 +2,7 @@
 set -x PATH $PATH $HOME/.local/bin $HOME/.local/share/cargo/bin
 
 # General environment variables
-set -x BROWSER firefox
+set -x BROWSER librewolf
 set -x ICON_THEME Papirus
 set -x QT_QPA_PLATFORM "wayland;xcb"
 set -x ANKI_WAYLAND 1
