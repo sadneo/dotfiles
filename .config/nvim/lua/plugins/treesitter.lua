@@ -4,7 +4,6 @@ local filetypes = {
     "lua",
     "markdown",
     "markdown_inline",
-    "norg",
     "rust",
     "toml",
     "tsx",
