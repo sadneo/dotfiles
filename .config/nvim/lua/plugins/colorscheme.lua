@@ -1,7 +1,8 @@
 return {
-    { "folke/tokyonight.nvim", lazy = true },
-    { "rebelot/kanagawa.nvim", lazy = true },
-    { "rose-pine/neovim", lazy = true },
+    { "folke/tokyonight.nvim",  lazy = true },
+    { "rebelot/kanagawa.nvim",  lazy = true },
+    { "rose-pine/neovim",       lazy = true },
+    { "maxmx03/solarized.nvim", lazy = true },
     {
         "miikanissi/modus-themes.nvim",
         lazy = true,
