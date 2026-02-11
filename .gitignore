@@ -17,10 +17,6 @@
 !/.config/tmux/theme.conf
 !/.config/fish
 !/.config/fish/**
-!/.config/foot
-!/.config/foot/foot.ini
-!/.config/foot/themes
-!/.config/foot/themes/*
 !/.config/fuzzel
 !/.config/fuzzel/fuzzel.ini
 !/.config/git
