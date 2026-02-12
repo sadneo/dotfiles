@@ -63,6 +63,7 @@
     pfetch-rs
     neofetch
     btop
+    speedtest-cli
   ];
 
   # Programs
