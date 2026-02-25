@@ -22,6 +22,7 @@
     nemo
     seahorse
     mission-center
+    opensnitch-ui
 
     libreoffice-qt6-fresh
     gimp
@@ -177,6 +178,9 @@
       }
     ];
   };
+
+  ## OpenSnitch
+  services.opensnitch-ui.enable = true;
 
   ## Auto mount
   services.udiskie = {
