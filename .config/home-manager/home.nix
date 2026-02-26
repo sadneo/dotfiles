@@ -22,6 +22,7 @@
     nemo
     seahorse
     mission-center
+    opensnitch-ui
 
     libreoffice-qt6-fresh
     gimp
@@ -46,6 +47,7 @@
     lua-language-server
     ruff
     nixfmt-rfc-style
+    shfmt
     clippy
     distrobox
     pkgs-unstable.opencode
@@ -83,6 +85,48 @@
         size = 0;
       };
     };
+  };
+
+  programs.tmux = {
+    enable = true;
+    terminal = "foot";
+    shortcut = "j";
+    baseIndex = 1;
+    mouse = true;
+
+    extraConfig = ''
+      # --- General Settings ---
+      bind c new-window -c "#{pane_current_path}"
+      set-option -sa terminal-overrides ",foot:Tc"
+
+      # --- Solarized Light Theme (Flexoki Logic) ---
+      # Backgrounds: bg_1=#fdf6e3, bg_2=#eee8d5
+      # Text: tx_1=#52676f, tx_2=#657b83
+      # Accents: Red=#d70000, Green=#5f8700, Yellow=#af8700, Blue=#0087ff
+
+      set -g status-style "bg=#fdf6e3,fg=#52676f"
+      set -g status-justify "left"
+      set -g status-left-length "100"
+      set -g status-right-length "100"
+
+      # Messages & Panes
+      set -g message-style "fg=#52676f,bg=#eee8d5,align=centre"
+      set -g pane-border-style "fg=#e9e2cb"
+      set -g pane-active-border-style "fg=#0087ff"
+
+      # Status Left: [Prefix Indicator] [Session]
+      set -g status-left "#[fg=#fdf6e3]#{?client_prefix,#[bg=#d70000],#[bg=#5f8700]}  #S "
+
+      # Status Right: [Branch Symbol] [Branch Name]
+      set -g status-right "#[fg=#fdf6e3,bg=#af8700]  #(git -C #{pane_current_path} branch --show-current 2>/dev/null) "
+
+      # Window Formats
+      setw -g window-status-format "#[bg=#eee8d5,fg=#657b83] #I[#W] "
+      setw -g window-status-current-format "#[bg=#fdf6e3,fg=#52676f,bold] #I[#W] "
+
+      # Modes & Selection
+      setw -g mode-style "fg=#fdf6e3,bg=#af8700,bold"
+    '';
   };
 
   programs.direnv = {
@@ -136,6 +180,9 @@
       }
     ];
   };
+
+  ## OpenSnitch
+  services.opensnitch-ui.enable = true;
 
   ## Auto mount
   services.udiskie = {
