@@ -1,7 +1,8 @@
-include dark.conf
+include light.conf
 
 ### Output configuration
 include "$(cat /etc/hostname).conf"
+default_dim_inactive 0.05
 
 ### Input configuration
 input "type:keyboard" {
@@ -22,7 +23,7 @@ exec bt-agent -c NoInputNoOutput
 exec sunshine
 exec nm-applet
 exec_always kanshi
-exec_always pkill wayvnc; wayvnc $(tailscale ip -4)
+exec_always "pkill wayvnc; wayvnc $(tailscale ip -4)"
 
 ### Custom Keybinds
 set $mod Mod4
