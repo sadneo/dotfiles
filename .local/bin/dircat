@@ -1,72 +1,51 @@
 #!/bin/sh
+# vim: ft=sh
 
+# Function to dump file contents
 dump_file() {
-    filepath="$1"
-    out="$2"
+	filepath="$1"
 
-    echo "#####################################" >> "$out"
-    echo "filename: $filepath" >> "$out"
-    echo >> "$out"
+	echo "#####################################"
+	echo "filename: $filepath"
+	echo ""
 
-    if [ -f "$filepath" ]; then
-        # Using 'cat' and redirecting errors to continue
-        if ! cat "$filepath" >> "$out" 2>/dev/null; then
-            echo "[Error reading file: $filepath]" >> "$out"
-        fi
-    else
-        echo "[Skipping: $filepath is not a regular file]" >> "$out"
-    fi
+	if [ -f "$filepath" ]; then
+		if ! cat "$filepath" 2>/dev/null; then
+			echo "[Error reading file: $filepath]"
+		fi
+	else
+		echo "[Skipping: $filepath is not a regular file]"
+	fi
 }
 
+# Function to process paths recursively
 process_path() {
-    path="$1"
-    out="$2"
+	path="$1"
 
-    if [ -f "$path" ]; then
-        dump_file "$path" "$out"
-    elif [ -d "$path" ]; then
-        # Recursively process directory
-        find "$path" -type f | while IFS= read -r file; do
-            dump_file "$file" "$out"
-        done
-    else
-        echo "[Skipping: $path is not a file or directory]" >> "$out"
-    fi
+	if [ -f "$path" ]; then
+		dump_file "$path"
+	elif [ -d "$path" ]; then
+		find "$path" -type f | while IFS= read -r file; do
+			dump_file "$file"
+		done
+	else
+		echo "[Skipping: $path is not a file or directory]"
+	fi
 }
 
-main() {
-    output_file="$1"
-    shift
-    input_paths="$@"
-
-    # If no output file is given, use stdout
-    if [ -z "$output_file" ]; then
-        out="/dev/stdout"
-    else
-        out="$output_file"
-        # Empty the output file first
-        : > "$out"
-    fi
-
-    for path in $input_paths; do
-        process_path "$path" "$out"
-    done
-}
-
-# Check arguments
+# Main Logic
 if [ $# -lt 1 ]; then
-    echo "Usage: $0 <file_or_directory> [more ...] [output_file]"
-    exit 1
+	echo "Usage: $0 <file_or_directory> [more ...]"
+	exit 1
 fi
 
-# Optional last argument is output file if prefixed with '>'
-if [ "$1" = ">" ]; then
-    shift
-    output_file="$1"
-    shift
-else
-    output_file=""
-fi
+# Run the processing and capture all output into a variable
+# We then pipe that variable to wl-copy
+# Using a subshell () to group all output from the loop
+(
+	for path in "$@"; do
+		process_path "$path"
+	done
+) | wl-copy
 
-main "$output_file" "$@"
-
+echo "Successfully copied file contents to clipboard."

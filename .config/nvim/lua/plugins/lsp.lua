@@ -97,6 +97,7 @@ return {
                 debug = true,
                 sources = {
                     null_ls.builtins.formatting.nixfmt,
+                    null_ls.builtins.formatting.shfmt,
                 },
             })
         end,
