@@ -36,6 +36,7 @@
     # Theme stuff
     papirus-icon-theme
     bibata-cursors
+    yaru-theme
 
     # CLI dev tools
     gh
