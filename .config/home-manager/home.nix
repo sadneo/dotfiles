@@ -93,10 +93,14 @@
     baseIndex = 1;
     mouse = true;
 
+    keyMode = "vi";
+
     extraConfig = ''
       # --- General Settings ---
       bind c new-window -c "#{pane_current_path}"
       set-option -sa terminal-overrides ",foot:Tc"
+      set -s set-clipboard on
+      set -sg escape-time 0
 
       # --- Solarized Light Theme (Flexoki Logic) ---
       # Backgrounds: bg_1=#fdf6e3, bg_2=#eee8d5
