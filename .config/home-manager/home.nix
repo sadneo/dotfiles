@@ -48,7 +48,6 @@
     ruff
     nixfmt-rfc-style
     shfmt
-    clippy
     distrobox
     pkgs-unstable.opencode
     tectonic
