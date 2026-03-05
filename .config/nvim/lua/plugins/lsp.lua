@@ -33,37 +33,59 @@ return {
                 },
             }
             vim.lsp.enable("lua_ls")
-
-            lspconfig.rust_analyzer = {
-                settings = {
-                    ["rust-analyzer"] = {
-                        cargo = {
-                            features = "all",
-                            buildScripts = {
+        end,
+    },
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^8',
+        lazy = false,   -- It's a ftplugin, it handles its own lazy loading
+        init = function()
+            vim.g.rustaceanvim = {
+                -- LSP configuration
+                server = {
+                    on_attach = function(_, bufnr)
+                        -- Force enable inlay hints on attach for Neovim 0.10+
+                        if vim.lsp.inlay_hint then
+                            vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+                        end
+                    end,
+                    default_settings = {
+                        -- rust-analyzer language server configuration
+                        ['rust-analyzer'] = {
+                            cargo = {
+                                allFeatures = true,
+                                buildScripts = {
+                                    enable = true,
+                                },
+                            },
+                            inlayHints = {
+                                typeHints = { enable = true },
+                                parameterHints = { enable = true },
+                                chainingHints = { enable = true },
+                            },
+                            checkOnSave = true,
+                            procMacro = {
+                                enable = true,
+                                -- Add this: it allows RA to use its own helper for macros
+                                attributes = { enable = true },
+                            },
+                            rustfmt = {
+                                rangeFormatting = { enable = true },
+                            },
+                            workspace = {
+                                symbol = {
+                                    search = {
+                                        scope = "workspace_and_dependencies",
+                                    },
+                                },
+                            },
+                            cachePriming = {
                                 enable = true,
                             },
                         },
-                        inlayHints = {
-                            typeHints = true,
-                            parameterHints = true,
-                            chainingHints = true,
-                        },
-                        checkOnSave = true,
-                        -- checkOnSave = {
-                        --     features = "all",
-                        --     command = "clippy",
-                        --     extraArgs = { "--no-deps" },
-                        -- },
-                        procMacro = {
-                            enable = true
-                        },
-                        rustfmt = {
-                            rangeFormatting = { enable = true },
-                        },
-                    }
-                }
+                    },
+                },
             }
-            vim.lsp.enable("rust_analyzer")
         end,
     },
     {
