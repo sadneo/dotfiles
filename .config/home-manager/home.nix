@@ -213,9 +213,6 @@
     ];
   };
 
-  ## OpenSnitch
-  services.opensnitch-ui.enable = true;
-
   ## Auto mount
   services.udiskie = {
     enable = true;
