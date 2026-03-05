@@ -102,6 +102,12 @@
       set -s set-clipboard on
       set -sg escape-time 0
 
+      bind L \
+          rename-window -t 1 'code' \; \
+          new-window -t 2 -n 'util' \; \
+          new-window -t 3 -n 'agent' 'opencode' \; \
+          select-window -t 1
+
       # --- Solarized Light Theme (Flexoki Logic) ---
       # Backgrounds: bg_1=#fdf6e3, bg_2=#eee8d5
       # Text: tx_1=#52676f, tx_2=#657b83
