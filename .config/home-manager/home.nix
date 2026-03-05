@@ -32,7 +32,30 @@
     vscode
     chromium
     arduino-ide
-    pkgs-unstable.godot-mono
+    (pkgs-unstable.symlinkJoin {
+      name = "godot-wrapped";
+      paths = [ pkgs-unstable.godot_4-mono ];
+      buildInputs = [ pkgs-unstable.makeWrapper ];
+      postBuild = ''
+        # 1. Wrap the binary
+        wrapProgram $out/bin/godot4-mono \
+          --add-flags "--single-window" \
+          --set WLR_NO_HARDWARE_CURSORS "1"
+
+        # 2. Fix the .desktop file
+        # Remove the read-only symlink created by symlinkJoin
+        rm $out/share/applications/*.desktop
+
+        # Copy the actual file into our wrapper's directory
+        cp ${pkgs-unstable.godot_4-mono}/share/applications/*.desktop $out/share/applications/
+
+        # Nix copies inherit read-only permissions; we must make it writable before sed can edit it
+        chmod +w $out/share/applications/*.desktop
+
+        # Overwrite the Exec line
+        sed -i "s|^Exec=.*|Exec=$out/bin/godot4-mono|g" $out/share/applications/*.desktop
+      '';
+    })
 
     # Theme stuff
     papirus-icon-theme
