@@ -42,6 +42,11 @@ return {
                     require("telescope.builtin").live_grep()
                 end,
             },
+            {
+                "gr", function()
+                    require("telescope.builtin").lsp_references()
+                end,
+            },
         },
         opts = {
             defaults = {
