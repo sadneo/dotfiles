@@ -7,7 +7,7 @@
 
 {
   imports = [
-    ./status.nix
+    ./sway.nix
   ];
 
   home.username = "aidan";
