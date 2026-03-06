@@ -6,6 +6,10 @@
 }:
 
 {
+  imports = [
+    ./status.nix
+  ];
+
   home.username = "aidan";
   home.homeDirectory = "/home/aidan";
   home.stateVersion = "25.05";

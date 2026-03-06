@@ -25,10 +25,23 @@
       };
     in
     {
-      homeConfigurations.aidan = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-        extraSpecialArgs = { inherit pkgs-unstable; };
-        modules = [ ./home.nix ];
+      homeConfigurations = {
+        "aidan@babel" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            inherit pkgs-unstable;
+            host = "babel";
+          };
+          modules = [ ./home.nix ];
+        };
+        "aidan@nile" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = {
+            inherit pkgs-unstable;
+            host = "nile";
+          };
+          modules = [ ./home.nix ];
+        };
       };
     };
 }
