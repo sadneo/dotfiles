@@ -16,8 +16,6 @@
 !/.config/tmux/theme.conf
 !/.config/fish
 !/.config/fish/**
-!/.config/fuzzel
-!/.config/fuzzel/fuzzel.ini
 !/.config/git
 !/.config/git/config
 !/.config/git/credential-helper.sh
