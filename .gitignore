@@ -12,15 +12,11 @@
 !/.local/bin/*
 
 !/.config
-!/.config/tmux
-!/.config/tmux/theme.conf
 !/.config/fish
 !/.config/fish/**
 !/.config/git
 !/.config/git/config
 !/.config/git/credential-helper.sh
-!/.config/home-manager
-!/.config/home-manager/**
 !/.config/kitty
 !/.config/kitty/kitty.conf
 !/.config/kitty/current-theme.conf
