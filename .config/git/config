@@ -11,3 +11,5 @@
 [credential "https://gist.github.com"]
 	helper =
 	helper = !~/.nix-profile/bin/gh auth git-credential
+[advice]
+	addIgnoredFile = false
