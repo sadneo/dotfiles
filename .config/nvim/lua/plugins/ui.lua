@@ -1,5 +1,41 @@
 return {
     {
+        "nvim-mini/mini.starter",
+        version = false,
+        event = "VimEnter",
+        cond = function()
+            return vim.fn.argc(-1) == 0
+        end,
+        opts = function()
+            return {
+                evaluate_single = true,
+                items = {
+                    { name = "Insert",          action = "enew",                              section = "Actions" },
+                    {
+                        name = "Restore session",
+                        action = function()
+                            require("lazy").load({ plugins = { "persistence.nvim" } })
+                            require("persistence").load()
+                        end,
+                        section = "Actions",
+                    },
+                    { name = "Lazy",            action = "Lazy",                              section = "Actions" },
+                    { name = "Quit",            action = "qa",                                section = "Actions" },
+                },
+                footer = "Time to do work.",
+            }
+        end,
+        config = function(_, opts)
+            local starter = require("mini.starter")
+            starter.setup(opts)
+            vim.schedule(function()
+                if vim.fn.argc(-1) == 0 then
+                    starter.open()
+                end
+            end)
+        end,
+    },
+    {
         "nvim-lualine/lualine.nvim",
         event = "VeryLazy",
         opts = {
@@ -56,7 +92,7 @@ return {
     },
     {
         "stevearc/oil.nvim",
-        event = "VeryLazy",
+        cmd = "Oil",
         opts = {
             confirmation = {
                 border = "none",
@@ -92,7 +128,10 @@ return {
         event = "BufAdd",
         opts = {
             options = {
-                modified_icon = "•"
+                always_show_bufferline = false,
+                buffer_close_icon = " ",
+                modified_icon = "*",
+                close_icon = " ",
             },
         },
         keys = {
