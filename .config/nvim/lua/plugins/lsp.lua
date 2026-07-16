@@ -38,19 +38,16 @@ return {
     {
         'mrcjkb/rustaceanvim',
         version = '^8',
-        lazy = false,   -- It's a ftplugin, it handles its own lazy loading
+        lazy = false, -- lazy by design
         init = function()
             vim.g.rustaceanvim = {
-                -- LSP configuration
                 server = {
                     on_attach = function(_, bufnr)
-                        -- Force enable inlay hints on attach for Neovim 0.10+
                         if vim.lsp.inlay_hint then
                             vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
                         end
                     end,
                     default_settings = {
-                        -- rust-analyzer language server configuration
                         ['rust-analyzer'] = {
                             cargo = {
                                 allFeatures = true,
@@ -112,11 +109,11 @@ return {
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
+        ft = {"nix", "sh", "bash", "zsh"},
         config = function()
             local null_ls = require("null-ls")
 
             null_ls.setup({
-                debug = true,
                 sources = {
                     null_ls.builtins.formatting.nixfmt,
                     null_ls.builtins.formatting.shfmt,
