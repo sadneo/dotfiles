@@ -33,7 +33,7 @@ default_border pixel 1
 default_floating_border pixel 1
 floating_modifier $mod normal
 hide_edge_borders smart
-font pango: Aporetic Serif Mono 10
+font pango: Aporetic Serif Mono 9
 
 # Custom keybinds
 bindsym $mod+d exec fuzzel
