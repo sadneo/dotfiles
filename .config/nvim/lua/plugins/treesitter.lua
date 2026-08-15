@@ -12,6 +12,8 @@ local filetypes = {
     "yaml",
     "latex",
     "python",
+    "html",
+    "json",
 }
 
 return {

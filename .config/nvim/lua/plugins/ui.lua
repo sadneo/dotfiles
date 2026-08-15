@@ -10,7 +10,7 @@ return {
             return {
                 evaluate_single = true,
                 items = {
-                    { name = "Insert",          action = "enew",                              section = "Actions" },
+                    { name = "Insert",         action = "enew", section = "Actions" },
                     {
                         name = "Restore session",
                         action = function()
@@ -19,8 +19,9 @@ return {
                         end,
                         section = "Actions",
                     },
-                    { name = "Lazy",            action = "Lazy",                              section = "Actions" },
-                    { name = "Quit",            action = "qa",                                section = "Actions" },
+                    { name = "Leetcode",       action = "Leet", section = "Actions" },
+                    { name = "Plugins (Lazy)", action = "Lazy", section = "Actions" },
+                    { name = "Quit",           action = "qa",   section = "Actions" },
                 },
                 footer = "Time to do work.",
             }
