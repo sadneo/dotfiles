@@ -14,6 +14,7 @@
 !/.config
 !/.config/fish
 !/.config/fish/**
+/.config/fish/completions
 !/.config/git
 !/.config/git/config
 !/.config/git/credential-helper.sh
