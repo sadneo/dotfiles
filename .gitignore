@@ -34,3 +34,5 @@
 !/.config/swaylock/config
 !/.config/swaynag
 !/.config/swaynag/config
+!/.config/opencode
+!/.config/opencode/opencode.json*
