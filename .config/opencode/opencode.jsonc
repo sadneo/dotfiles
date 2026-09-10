@@ -9,7 +9,15 @@
           "type": "remote",
           "url": "https://mcp.context7.com/mcp",
           "headers": {
-              "CONTEXT7_API_KEY": "ctx7sk-06fa944e-e691-4ed7-babf-0982c7ef7f32"
+              "CONTEXT7_API_KEY": "{env:CONTEXT7_API_KEY}"
+          },
+          "enabled": true
+      },
+      "pixellab": {
+          "type": "remote",
+          "url": "https://api.pixellab.ai/mcp",
+          "headers": {
+              "Authorization": "{env:PIXELLAB_AUTHORIZATION}"
           },
           "enabled": true
       }
@@ -33,5 +41,13 @@
     "edit": {
       "/nix/store/**": "deny"
     }
+  },
+  "provider": {
+    // Detected copilot authentication; opencode-quota added this global provider declaration.
+    "copilot": {},
+    // Detected openai authentication; opencode-quota added this global provider declaration.
+    "openai": {},
+    // Detected openrouter authentication; opencode-quota added this global provider declaration.
+    "openrouter": {}
   }
 }
