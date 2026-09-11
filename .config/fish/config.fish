@@ -12,6 +12,6 @@ if status is-interactive
     set fish_greeting
 end
 
-if test -f ~/.config/secrets/secrets.fish
-    source ~/.config/secrets/secrets.fish
+if test -f ~/.config/fish/secrets.fish
+    source ~/.config/fish/secrets.fish
 end
