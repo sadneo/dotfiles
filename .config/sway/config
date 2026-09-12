@@ -46,10 +46,6 @@ bindsym $mod+Shift+t exec "systemctl hibernate"
 bindsym $mod+Shift+i exec ~/.config/sway/scripts/toggle-idle-inhibit.sh
 bindsym $mod+i bar mode toggle
 
-bindsym $mod+Escape mode "disable"
-mode "disable" {
-    bindsym $mod+Escape mode "default"
-}
 bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
 bindsym $mod+o exec ~/.config/sway/scripts/monitor-swap.sh
 
@@ -185,9 +181,9 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Shift+Escape mode "passthrough"
+bindsym $mod+Escape mode "passthrough"
 mode "passthrough" {
-    bindsym $mod+Shift+Escape mode "default"
+    bindsym $mod+Escape mode "default"
 
     # Using scratchpad to show windows during VNC usage
     bindsym $mod+Shift+minus move scratchpad
