@@ -1,0 +1,113 @@
+#!/usr/bin/env nix-shell
+#! nix-shell -i sh -p yt-dlp jq
+
+set -eu
+
+if [ "$#" -lt 1 ]; then
+    echo "usage: $0 <youtube-url> [output-dir]"
+    exit 1
+fi
+
+url="$1"
+outdir="${2:-transcripts}"
+
+mkdir -p "$outdir"
+
+tmpdir="$(mktemp -d)"
+trap 'rm -rf "$tmpdir"' EXIT
+
+echo "Fetching video metadata..."
+
+info="$(yt-dlp \
+    --skip-download \
+    --dump-single-json \
+    "$url"
+)"
+
+title="$(printf '%s' "$info" | jq -r '.title')"
+channel="$(printf '%s' "$info" | jq -r '.channel // .uploader // "Unknown"')"
+video_url="$(printf '%s' "$info" | jq -r '.webpage_url')"
+
+# Make filename filesystem-safe
+filename="$(
+    printf '%s' "$title" |
+    tr '/:' '__' |
+    tr -cd '[:alnum:] _.-' |
+    sed 's/[[:space:]][[:space:]]*/ /g'
+)"
+
+echo "Downloading subtitles..."
+
+yt-dlp \
+    --skip-download \
+    --write-subs \
+    --write-auto-subs \
+    --sub-langs 'en.*' \
+    --sub-format json3 \
+    -o "$tmpdir/subtitle.%(ext)s" \
+    "$url"
+
+subtitle="$(
+    find "$tmpdir" \
+        -type f \
+        -name '*.json3' |
+        head -n 1
+)"
+
+if [ -z "$subtitle" ]; then
+    echo "error: no English subtitles found"
+    exit 1
+fi
+
+output="$outdir/$filename.md"
+
+{
+    printf '# %s\n\n' "$title"
+    printf 'Channel: %s\n' "$channel"
+    printf 'URL: %s\n\n' "$video_url"
+    printf '## Transcript\n\n'
+
+    jq -r '
+        .events[]
+        | select(.segs != null)
+        | {
+            time: ((.tStartMs // 0) / 1000 | floor),
+            text: (
+                [.segs[].utf8]
+                | join("")
+                | gsub("\n"; " ")
+                | gsub("[[:space:]]+"; " ")
+            )
+        }
+        | select(.text != "")
+        | "[\(.time)] \(.text)"
+    ' "$subtitle" |
+    awk '
+        function timestamp(sec) {
+            h = int(sec / 3600)
+            m = int((sec % 3600) / 60)
+            s = sec % 60
+
+            if (h > 0)
+                return sprintf("%02d:%02d:%02d", h, m, s)
+            else
+                return sprintf("%02d:%02d", m, s)
+        }
+
+        {
+            match($0, /^\[([0-9]+)\] (.*)$/, parts)
+
+            sec = parts[1]
+            text = parts[2]
+
+            # YouTube auto-captions can emit consecutive duplicates
+            if (text == previous)
+                next
+
+            print "[" timestamp(sec) "] " text
+            previous = text
+        }
+    '
+} > "$output"
+
+echo "Wrote: $output"
