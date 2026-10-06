@@ -4,7 +4,7 @@
   // OpenCode Quota: loads the server plugin for slash commands and quota checks.
   "plugin": [
       "@mohak34/opencode-notifier@latest",
-      "@slkiser/opencode-quota",
+      "@slkiser/opencode-quota@4",
       "@dietrichgebert/ponytail"
   ],
   "mcp": {
@@ -22,7 +22,7 @@
           "headers": {
               "Authorization": "{env:PIXELLAB_AUTHORIZATION}"
           },
-          "enabled": true
+          "enabled": false
       }
   },
   "permission": {
