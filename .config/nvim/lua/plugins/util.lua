@@ -29,8 +29,26 @@ return {
     },
     {
         "folke/persistence.nvim",
-        event = "VeryLazy",
-        opts = { options = vim.opt.sessionoptions:get() },
+        event = "VimEnter",
+        opts = {},
+        config = function(_, opts)
+            local persistence = require("persistence")
+            persistence.setup(opts)
+            if vim.g.zellij_resurrect then
+                persistence.load()
+            end
+            -- ponytail: one session per cwd/branch; use pane-specific paths for concurrent editors.
+            vim.fn.timer_start(30000, function()
+                if not persistence.active() then return end
+                for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+                    if vim.bo[buf].buftype == "" and vim.api.nvim_buf_get_name(buf) ~= ""
+                        and not vim.tbl_contains({ "gitcommit", "gitrebase", "jj" }, vim.bo[buf].filetype) then
+                        pcall(persistence.save)
+                        break
+                    end
+                end
+            end, { ["repeat"] = -1 })
+        end,
     },
     {
         "echasnovski/mini.comment",

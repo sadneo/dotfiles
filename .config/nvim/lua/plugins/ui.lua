@@ -4,7 +4,7 @@ return {
         version = false,
         event = "VimEnter",
         cond = function()
-            return vim.fn.argc(-1) == 0
+            return vim.fn.argc(-1) == 0 and not vim.g.zellij_resurrect
         end,
         opts = function()
             return {
@@ -30,7 +30,7 @@ return {
             local starter = require("mini.starter")
             starter.setup(opts)
             vim.schedule(function()
-                if vim.fn.argc(-1) == 0 then
+                if vim.fn.argc(-1) == 0 and not vim.g.zellij_resurrect then
                     starter.open()
                 end
             end)

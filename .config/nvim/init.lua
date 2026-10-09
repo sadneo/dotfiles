@@ -1,3 +1,6 @@
+vim.g.zellij_resurrect = vim.env.ZELLIJ_NVIM_RESURRECT == "1"
+vim.env.ZELLIJ_NVIM_RESURRECT = nil
+
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
