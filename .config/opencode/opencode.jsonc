@@ -23,6 +23,14 @@
               "Authorization": "{env:PIXELLAB_AUTHORIZATION}"
           },
           "enabled": false
+      },
+      "playwright": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@playwright/mcp@latest"
+        ]
       }
   },
   "permission": {
