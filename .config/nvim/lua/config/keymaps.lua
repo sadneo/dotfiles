@@ -12,8 +12,7 @@ vim.keymap.set({ "n", "v" }, "<Leader>Y", "\"+Y")
 
 vim.keymap.set("n", "<C-c>", ":%y +<CR>")
 vim.keymap.set("n", "<C-v>", function()
-  vim.cmd("%delete _")
-  vim.cmd("put +")
+  vim.api.nvim_buf_set_lines(0, 0, -1, false, vim.fn.getreg("+", 1, true))
 end, { desc = "Replace buffer with clipboard" })
 
 vim.keymap.set("n", "<C-S-l>", function()
