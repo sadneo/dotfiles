@@ -13,3 +13,5 @@
 	helper = !~/.nix-profile/bin/gh auth git-credential
 [advice]
 	addIgnoredFile = false
+[core]
+	autocrlf = input
