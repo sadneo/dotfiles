@@ -36,4 +36,6 @@
 !/.config/swaynag
 !/.config/swaynag/config
 !/.config/opencode
+!/.config/opencode/skills
+!/.config/opencode/skills/**
 !/.config/opencode/opencode.json*

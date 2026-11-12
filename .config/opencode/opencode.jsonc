@@ -2,10 +2,10 @@
   "$schema": "https://opencode.ai/config.json",
   // OpenCode Quota: tuiCommandDisplay chooses whether native TUI command output appears in the session transcript or a local popup dialog.
   // OpenCode Quota: loads the server plugin for slash commands and quota checks.
-  "plugin": [
-      "opencode-claude-auth@2.2.1",
+  "plugins": [
+      "opencode-claude-auth@3.0.0",
       "@mohak34/opencode-notifier@latest",
-      "@slkiser/opencode-quota@4",
+      "@slkiser/opencode-quota@6.2.2",
       "@dietrichgebert/ponytail",
       "superpowers@git+https://github.com/obra/superpowers.git"
   ],
