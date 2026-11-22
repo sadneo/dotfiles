@@ -43,6 +43,7 @@ bindsym $mod+Control+Shift+x exec "systemd-inhibit --what=sleep --why='Screen lo
 bindsym $mod+Shift+r exec ~/.config/sway/scripts/sleep.sh
 bindsym $mod+Shift+t exec "systemctl hibernate"
 bindsym $mod+Shift+i exec ~/.config/sway/scripts/toggle-idle-inhibit.sh
+bindsym --no-repeat $mod+Shift+v exec dev-clipboard paste
 bindsym $mod+i bar mode toggle
 
 bindsym $mod+Shift+p exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy
